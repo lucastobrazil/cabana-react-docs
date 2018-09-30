@@ -1,10 +1,9 @@
-import React, { Fragment } from 'react';
-import { HeadingOne, NotificationBar } from 'cabana-react';
-
+import Docs from './docs';
+import { NotificationBar } from 'cabana-react';
+import React from 'react';
 export default function NotificationBarDocs() {
     return (
-        <Fragment>
-            <HeadingOne>NotificationBar</HeadingOne>
+        <Docs title="NotificationBar">
             <NotificationBar mb={1} content="Oops! There seems to be an error" bg="error" color="white" />
             <NotificationBar mb={1} content="Have you saved your work?" bg="warning" color="black" />
             <NotificationBar mb={1} content="Oh yes! Settings have been saved" bg="success" color="white" />
@@ -24,6 +23,6 @@ export default function NotificationBarDocs() {
                 bg="success"
                 color="white"
             />
-        </Fragment>
+        </Docs>
     );
 }

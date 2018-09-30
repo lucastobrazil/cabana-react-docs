@@ -1,32 +1,34 @@
-import React from 'react';
 import {
-    UberText,
+    BodyText,
+    CaptionText,
+    HeadingFive,
+    HeadingFour,
+    HeadingOne,
+    HeadingThree,
+    HeadingTwo,
     HeroText,
     LeadText,
-    BodyText,
     SmallText,
-    CaptionText,
     TinyText,
-    HeadingOne,
-    HeadingTwo,
-    HeadingThree,
-    HeadingFour,
-    HeadingFive,
+    UberText,
 } from 'cabana-react';
+
+import Docs from './docs';
+import React from 'react';
+
 const TextDocs = () => (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        <div style={{ flexBasis: '100%' }}>
-            <BodyText>Typography</BodyText>
+    <Docs title="Text">
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <div>
+                <HeadingOne color="primary">Font Family #1</HeadingOne>
+                <Content />
+            </div>
+            <div>
+                <HeadingOne color="primary">Font Family #2</HeadingOne>
+                <Content fontFamily="alt" />
+            </div>
         </div>
-        <div>
-            <HeadingOne color="primary">Font Family #1</HeadingOne>
-            <Content />
-        </div>
-        <div>
-            <HeadingOne color="primary">Font Family #2</HeadingOne>
-            <Content fontFamily="alt" />
-        </div>
-    </div>
+    </Docs>
 );
 
 const Content = ({ fontFamily }) => (

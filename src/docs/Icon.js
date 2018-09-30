@@ -1,10 +1,10 @@
+import Docs from './docs';
+import { Icon } from 'cabana-react';
 import React from 'react';
-import { HeadingOne, Icon } from 'cabana-react';
 export default function IconDocs() {
     return (
-        <div>
-            <HeadingOne>Icons</HeadingOne>
+        <Docs title="Icons">
             <Icon />
-        </div>
+        </Docs>
     );
 }

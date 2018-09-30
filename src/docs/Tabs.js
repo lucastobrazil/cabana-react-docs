@@ -1,9 +1,9 @@
+import Docs from './docs';
 import React from 'react';
 import { Tabs } from 'cabana-react';
-
 export default function TabsDocs() {
     return (
-        <div>
+        <Docs title="Tabs">
             <Tabs>
                 <div label="Movies">
                     See ya later, <em>Alligator</em>!
@@ -15,6 +15,6 @@ export default function TabsDocs() {
                     Nothing to see here, this tab is <em>extinct</em>!
                 </div>
             </Tabs>
-        </div>
+        </Docs>
     );
 }

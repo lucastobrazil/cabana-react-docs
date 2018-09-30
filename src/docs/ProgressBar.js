@@ -1,5 +1,7 @@
-import React, { Fragment } from 'react';
 import { Box, ProgressBar } from 'cabana-react';
+import React, { Fragment } from 'react';
+
+import Docs from './docs';
 
 const Slider = ({ onChange, amount }) => (
     <Fragment>
@@ -53,13 +55,15 @@ class StatefulExample extends React.Component {
 
 export default function ProgressBarDocs() {
     return (
-        <Box width={1 / 4}>
-            <StatefulExample innerBg="primary" />
-            <StatefulExample innerBg="tertiary" borderRadius="large" />
-            <StatefulExample innerBg="primary" p="4px" borderRadius="large" />
-            <StatefulExample innerBg="primary" p={1} borderRadius="none" />
-            <StatefulExample innerBg="primary" fontSize="hero" />
-            <StatefulExample innerBg="primary" fontSize="hero" showNumber={false} />
-        </Box>
+        <Docs title="ProgressBar">
+            <Box width={1 / 4}>
+                <StatefulExample innerBg="primary" />
+                <StatefulExample innerBg="tertiary" borderRadius="large" />
+                <StatefulExample innerBg="primary" p="4px" borderRadius="large" />
+                <StatefulExample innerBg="primary" p={1} borderRadius="none" />
+                <StatefulExample innerBg="primary" fontSize="hero" />
+                <StatefulExample innerBg="primary" fontSize="hero" showNumber={false} />
+            </Box>
+        </Docs>
     );
 }

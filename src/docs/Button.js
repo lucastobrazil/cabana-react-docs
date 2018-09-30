@@ -1,5 +1,7 @@
+import { Button, ButtonLarge, ButtonSmall, SmallText } from 'cabana-react';
+
+import Docs from './docs';
 import React from 'react';
-import { HeadingOne, SmallText, Box, Button, ButtonSmall, ButtonLarge } from 'cabana-react';
 
 /* 
     In the real world you would probably define your own Primary Buttons
@@ -16,8 +18,7 @@ const primaryProps = {
 };
 export default function ButtonDocs() {
     return (
-        <Box>
-            <HeadingOne>ButtonDocs</HeadingOne>
+        <Docs title="Buttons">
             <table>
                 <tbody>
                     <tr>
@@ -90,6 +91,6 @@ export default function ButtonDocs() {
                     </tr>
                 </tbody>
             </table>
-        </Box>
+        </Docs>
     );
 }
