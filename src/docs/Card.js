@@ -9,7 +9,13 @@ export default function CardDocs() {
     return (
         <Docs title="Cards">
             <div
-                style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridColumnGap: 10, alignItems: 'start' }}
+                style={{
+                    maxWidth: 1024,
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr 1fr',
+                    gridColumnGap: 10,
+                    alignItems: 'start',
+                }}
             >
                 <Card>
                     <CardTitle>James Dean</CardTitle>
