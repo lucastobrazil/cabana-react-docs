@@ -1,5 +1,5 @@
 import { Box, LeadText } from 'cabana-react';
-import { borderBottom, fontFamily, fontWeight, space } from 'styled-system';
+import { borderBottom, borderColor, fontFamily, fontWeight, space } from 'styled-system';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -14,10 +14,12 @@ const ListItem = styled.li`
     ${fontWeight};
     ${space};
     ${borderBottom};
+    ${borderColor};
 `;
 
 ListItem.defaultProps = {
-    borderBottom: '1px solid lightgrey',
+    borderBottom: '1px solid',
+    borderColor: 'lightGrey',
     py: 1,
 };
 
