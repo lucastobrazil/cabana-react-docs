@@ -15,7 +15,6 @@ import TextDocs from './docs/Text';
 import TooltipDocs from './docs/Tooltip';
 import theme from './theme';
 
-// import TooltipDocs from './docs/Tooltip';
 injectGlobal`
 body {
     margin: 0;
@@ -27,7 +26,6 @@ const App = () => {
                 {/* <GlobalStyle /> */}
                 <Nav />
                 <Box ml={216} maxWidth={900} px={4}>
-                    <TooltipDocs />
                     <ButtonDocs />
                     <CardDocs />
                     <FormsDocs />
@@ -37,6 +35,7 @@ const App = () => {
                     <ProgressBarDocs />
                     <TabsDocs />
                     <TextDocs />
+                    <TooltipDocs />
                 </Box>
             </Box>
         </ThemeProvider>

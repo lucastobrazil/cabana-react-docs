@@ -8,6 +8,12 @@ import StatefulRadioButtons from './Radio';
 export default function FormsDocs() {
     return (
         <Docs title="Forms">
+            Todo:{' '}
+            <ul>
+                <li>Inputs with icons left and right</li>
+                <li>Textarea</li>
+                <li>Toggle switch</li>
+            </ul>
             <HeadingFive>Text Inputs</HeadingFive>
             <Box
                 display="grid"
