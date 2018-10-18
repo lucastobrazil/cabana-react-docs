@@ -74,7 +74,7 @@ export default function ButtonDocs() {
                             <SmallText>Colourful</SmallText>
                         </td>
                         <td>
-                            <ButtonSmall bg="error" color="white">
+                            <ButtonSmall bg="error" borderRadius="large" color="white">
                                 Small
                             </ButtonSmall>
                         </td>

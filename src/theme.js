@@ -26,7 +26,7 @@ const theme = {
         normal: 400,
     },
     colors: {
-        primary: '#6D66F5',
+        primary: '#5450F7',
         secondary: '#25a9ce',
         tertiary: '#EF476F',
         black: '#303133',
@@ -36,6 +36,8 @@ const theme = {
         warning: '#FCEB3B',
         error: '#E6173E',
         white: '#ffffff',
+        inputFocus: '#4688F1',
+        inputDisabledBg: 'rgba(196, 196, 196, .3)',
     },
     lineHeights: {
         uber: 1.08,

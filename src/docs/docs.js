@@ -3,6 +3,7 @@ import React from 'react';
 export default function Docs({ title, children, style }) {
     return (
         <div style={style}>
+            <a name={title.split(' ').join('')} />
             <HeadingOne
                 fontWeight="bold"
                 mt={8}

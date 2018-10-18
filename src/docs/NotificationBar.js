@@ -15,7 +15,7 @@ export default function NotificationBarDocs() {
                 dismissable={false}
             />
             <NotificationBar
-                boxShadow={20}
+                boxShadow={100}
                 m={3}
                 icon={false}
                 fontSize="tiny"

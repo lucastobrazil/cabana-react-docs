@@ -1,5 +1,5 @@
-import { Box, LeadText } from 'cabana-react';
-import { borderBottom, borderColor, fontFamily, fontWeight, space } from 'styled-system';
+import { Box, CaptionText, LeadText } from 'cabana-react';
+import { borderBottom, borderColor, color, fontFamily, fontWeight, space } from 'styled-system';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -12,22 +12,31 @@ const List = styled.ul`
 const ListItem = styled.li`
     list-style-type: none;
     ${fontWeight};
-    ${space};
     ${borderBottom};
     ${borderColor};
+    ${color};
+    a {
+        ${space};
+        color: inherit;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
 `;
 
 ListItem.defaultProps = {
-    borderBottom: '1px solid',
-    borderColor: 'lightGrey',
-    py: 1,
+    p: 1,
 };
 
 const items = [
     'Buttons',
     'Cards',
+    'Forms',
     'Icons',
-    'Notification Bars',
+    'Notification Bar',
     'Pagination',
     'Progress Bar',
     'Tabs',
@@ -37,17 +46,19 @@ const items = [
 
 export default function Nav() {
     return (
-        <Box position="fixed" width={400} flexShrink={0} mr={2}>
-            <Box bg="primary" color="white" p={1}>
+        <Box position="fixed" width={216} mr={2} bg="primary" height="100%">
+            <Box color="white" p={1}>
                 <LeadText fontWeight="bold">Cabana Design System</LeadText>
             </Box>
-            <List fontFamily="default" p={1}>
-                <ListItem fontWeight="bold">Components</ListItem>
-                <List>
-                    {items.map(item => (
-                        <ListItem key={item}>{item}</ListItem>
-                    ))}
-                </List>
+            <CaptionText fontWeight="bold" px={1} color="warning">
+                Components
+            </CaptionText>
+            <List fontFamily="default" m={0}>
+                {items.map(item => (
+                    <ListItem key={item} color="white">
+                        <a href={`#${item.split(' ').join('')}`}>{item}</a>
+                    </ListItem>
+                ))}
             </List>
         </Box>
     );

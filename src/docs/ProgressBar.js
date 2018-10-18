@@ -59,7 +59,7 @@ export default function ProgressBarDocs() {
             <Box width={1 / 4}>
                 <StatefulExample innerBg="primary" />
                 <StatefulExample innerBg="tertiary" borderRadius="large" />
-                <StatefulExample innerBg="primary" p="4px" borderRadius="large" />
+                <StatefulExample innerBg="primary" color="error" p={4} borderRadius="large" />
                 <StatefulExample innerBg="primary" p={1} borderRadius="none" />
                 <StatefulExample innerBg="primary" fontSize="hero" />
                 <StatefulExample innerBg="primary" fontSize="hero" showNumber={false} />

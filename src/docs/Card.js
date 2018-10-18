@@ -1,4 +1,4 @@
-import { ButtonSmall, Card, CardBodyText, CardFooter, CardImage, CardTitle } from 'cabana-react';
+import { ButtonSmall, Card, CardBodyText, CardFooter, CardImage, CardTitle, TestButton } from 'cabana-react';
 
 import Docs from './docs';
 import React from 'react';
@@ -6,6 +6,11 @@ import React from 'react';
 const SampleBodyText = `Discount applies to all vehicle categories. Prices displayed on the easyJet websites 
     include the discount where the offer is applicable. R`;
 export default function CardDocs() {
+    // return (
+    //     <ButtonSmall bg="primary" color="white" iconRight={true}>
+    //         View Full Profile
+    //     </ButtonSmall>
+    // );
     return (
         <Docs title="Cards">
             <div
@@ -17,13 +22,13 @@ export default function CardDocs() {
                     alignItems: 'start',
                 }}
             >
-                <Card>
+                <Card is="article">
                     <CardTitle>James Dean</CardTitle>
                     <CardBodyText>{SampleBodyText}</CardBodyText>
                     <CardFooter>Footer</CardFooter>
                 </Card>
 
-                <Card textAlign="center">
+                <Card is="article" textAlign="center">
                     <CardTitle>James Dean</CardTitle>
                     <CardBodyText>
                         <p>{SampleBodyText}</p>
@@ -33,7 +38,7 @@ export default function CardDocs() {
                     </CardBodyText>
                     <CardFooter>Footer</CardFooter>
                 </Card>
-                <Card textAlign="center">
+                <Card is="article" textAlign="center">
                     <CardImage />
                     <CardTitle>James Dean</CardTitle>
                     <CardBodyText>
@@ -41,14 +46,14 @@ export default function CardDocs() {
                     </CardBodyText>
                     <CardFooter>Footer</CardFooter>
                 </Card>
-                <Card p={8}>
+                <Card is="article" p={8}>
                     <CardTitle>More Padding</CardTitle>
                     <CardBodyText>{SampleBodyText}</CardBodyText>
                     <CardFooter p={8} mx={-8} mb={-8} mt={4}>
                         Footer
                     </CardFooter>
                 </Card>
-                <Card bg="secondary" borderRadius="small" boxShadow={20}>
+                <Card is="article" bg="secondary" borderRadius="small" boxShadow={60}>
                     <CardTitle color="warning" fontWeight="normal">
                         Fancy secondary one
                     </CardTitle>

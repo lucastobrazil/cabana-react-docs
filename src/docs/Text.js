@@ -20,7 +20,9 @@ const TextDocs = () => (
     <Docs title="Text">
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             <div>
-                <HeadingOne color="primary">Font Family #1</HeadingOne>
+                <HeadingOne boxShadow={20} color="secondary">
+                    Font Family #1
+                </HeadingOne>
                 <Content />
             </div>
             <div>
