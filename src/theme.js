@@ -19,7 +19,7 @@ const theme = {
         tiny: '10px',
     },
     letterSpacings: {
-        tiny: '.117px',
+        tiny: '1.17px',
     },
     fontWeights: {
         bold: 700,
@@ -32,6 +32,7 @@ const theme = {
         black: '#303133',
         grey: '#8D8D8F',
         lightGrey: '#DADADA',
+        darkGrey: '#303133',
         success: '#44A45F',
         warning: '#FCEB3B',
         error: '#E6173E',
@@ -72,6 +73,7 @@ const theme = {
         desktop: 1024,
     },
     arrowSizes: [4, 8, 16, 24, 32],
+    avatarSizes: { smaller: '24px', small: '32px', medium: '48px', large: '64px', jumbo: '80px' },
 };
 
 export default theme;
