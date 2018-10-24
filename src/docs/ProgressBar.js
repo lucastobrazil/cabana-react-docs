@@ -35,11 +35,12 @@ class StatefulExample extends React.Component {
 
     render() {
         const { amount } = this.state;
-        const { innerBg, outerBg, borderRadius, p, fontSize, showNumber } = this.props;
+        const { innerBg, outerBg, borderRadius, p, fontSize, showNumber, minHeight, color } = this.props;
         return (
             <Box mt={3}>
                 <Slider onChange={this.onChange.bind(this)} amount={amount} />
                 <ProgressBar
+                    color={color}
                     p={p}
                     innerBg={innerBg}
                     outerBg={outerBg}
@@ -47,6 +48,7 @@ class StatefulExample extends React.Component {
                     borderRadius={borderRadius}
                     fontSize={fontSize}
                     showNumber={showNumber}
+                    minHeight={minHeight}
                 />
             </Box>
         );
@@ -56,13 +58,13 @@ class StatefulExample extends React.Component {
 export default function ProgressBarDocs() {
     return (
         <Docs title="ProgressBar">
-            <Box width={1 / 4}>
+            <Box width={1 / 3}>
                 <StatefulExample innerBg="primary" />
                 <StatefulExample innerBg="tertiary" borderRadius="large" />
-                <StatefulExample innerBg="primary" color="error" p={4} borderRadius="large" />
+                <StatefulExample innerBg="success" color="white" p={2} fontSize="body" borderRadius="large" />
                 <StatefulExample innerBg="primary" p={1} borderRadius="none" />
                 <StatefulExample innerBg="primary" fontSize="hero" />
-                <StatefulExample innerBg="primary" fontSize="hero" showNumber={false} />
+                <StatefulExample innerBg="primary" fontSize="hero" showNumber={false} minHeight={20} />
             </Box>
         </Docs>
     );
