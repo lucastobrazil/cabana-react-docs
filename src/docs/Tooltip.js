@@ -1,6 +1,7 @@
 import Docs from './docs';
 import React from 'react';
 import { Tooltip } from 'cabana-react';
+import DocLabel from '../components/DocLabel';
 
 export default function TooltipDocs() {
     const baseProps = {
@@ -16,19 +17,19 @@ export default function TooltipDocs() {
     return (
         <Docs title="Tooltip">
             <BaseTooltip>
-                <a>Default</a>
+                <DocLabel>Default</DocLabel>
             </BaseTooltip>
             <BaseTooltip placement="top" bg="warning" color="secondary">
-                <a>Top</a>
+                <DocLabel>Top</DocLabel>
             </BaseTooltip>
             <BaseTooltip placement="right">
-                <a>Right</a>
+                <DocLabel>Right</DocLabel>
             </BaseTooltip>
             <BaseTooltip placement="bottom">
-                <a>Bottom</a>
+                <DocLabel>Bottom</DocLabel>
             </BaseTooltip>
             <BaseTooltip placement="left">
-                <a>Left</a>
+                <DocLabel>Left</DocLabel>
             </BaseTooltip>
         </Docs>
     );

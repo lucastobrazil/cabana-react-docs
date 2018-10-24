@@ -1,6 +1,7 @@
-import { Button, ButtonLarge, ButtonSmall, SmallText } from 'cabana-react';
-
+import { Button, ButtonLarge, ButtonSmall } from 'cabana-react';
+import { IconTwitter, IconHeart } from 'cabanaico';
 import Docs from './docs';
+import DocLabel from '../components/DocLabel';
 import React from 'react';
 
 /* 
@@ -23,69 +24,78 @@ export default function ButtonDocs() {
                 <tbody>
                     <tr>
                         <td>
-                            <SmallText>Plain</SmallText>
+                            <DocLabel>Small</DocLabel>
                         </td>
                         <td>
-                            <ButtonSmall>Small</ButtonSmall>
+                            <ButtonSmall {...primaryProps}>Button</ButtonSmall>
                         </td>
                         <td>
-                            <Button>Button</Button>
+                            <ButtonSmall {...primaryProps}>
+                                <IconTwitter /> Button
+                            </ButtonSmall>
                         </td>
                         <td>
-                            <ButtonLarge>Large</ButtonLarge>
+                            <ButtonSmall {...primaryProps}>
+                                Button <IconTwitter />
+                            </ButtonSmall>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <SmallText>Primary</SmallText>
-                        </td>
-                        <td>
-                            <ButtonSmall {...primaryProps}>Small</ButtonSmall>
+                            <DocLabel>Normal</DocLabel>
                         </td>
                         <td>
                             <Button {...primaryProps}>Button</Button>
                         </td>
                         <td>
-                            <ButtonLarge {...primaryProps}>Large</ButtonLarge>
+                            <Button {...primaryProps}>
+                                <IconTwitter /> Button
+                            </Button>
+                        </td>
+                        <td>
+                            <Button {...primaryProps}>
+                                Button <IconTwitter />
+                            </Button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <SmallText>Icon</SmallText>
+                            <DocLabel>Large</DocLabel>
                         </td>
                         <td>
-                            <ButtonSmall {...primaryProps} iconLeft={true}>
-                                Small
-                            </ButtonSmall>
-                        </td>
-                        <td>
-                            <Button {...primaryProps} iconLeft={true}>
-                                Button
-                            </Button>
-                        </td>
-                        <td>
-                            <ButtonLarge {...primaryProps} iconLeft={true} iconRight={true}>
+                            <ButtonLarge {...primaryProps} fontWeight="bold">
                                 Button
                             </ButtonLarge>
                         </td>
+                        <td>
+                            <ButtonLarge {...primaryProps} fontWeight="bold">
+                                <IconTwitter /> Button
+                            </ButtonLarge>
+                        </td>
+                        <td>
+                            <ButtonLarge {...primaryProps} fontWeight="bold">
+                                Button <IconHeart />
+                            </ButtonLarge>
+                        </td>
                     </tr>
+
                     <tr>
                         <td>
-                            <SmallText>Colourful</SmallText>
+                            <DocLabel>Colourful</DocLabel>
                         </td>
                         <td>
                             <ButtonSmall bg="error" borderRadius="large" color="white">
-                                Small
+                                Button
                             </ButtonSmall>
                         </td>
                         <td>
-                            <Button bg="success" color="error" iconLeft={true}>
-                                Button
+                            <Button bg="success" color="error">
+                                <IconHeart /> Button
                             </Button>
                         </td>
                         <td>
-                            <ButtonLarge bg="tertiary" color="warning" iconLeft={true}>
-                                Button
+                            <ButtonLarge bg="tertiary" color="warning">
+                                <IconHeart /> Button
                             </ButtonLarge>
                         </td>
                     </tr>
