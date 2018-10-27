@@ -2,7 +2,7 @@ import { Box, CaptionText, LeadText } from 'cabana-react';
 import { borderBottom, borderColor, color, fontFamily, fontWeight, space } from 'styled-system';
 import React from 'react';
 import styled from 'styled-components';
-
+import { HashLink as Link } from 'react-router-hash-link';
 const List = styled.ul`
     ${fontFamily};
     padding: 0;
@@ -67,7 +67,7 @@ export default function DocsNav() {
             <List fontFamily="default" m={0}>
                 {items.map(item => (
                     <ListItem key={item} color="grey">
-                        <a href={`#${item.split(' ').join('')}`}>{item}</a>
+                        <Link to={`#${item.split(' ').join('')}`}>{item}</Link>
                     </ListItem>
                 ))}
             </List>
@@ -77,7 +77,7 @@ export default function DocsNav() {
                 </CaptionText>
                 {todoItems.map(item => (
                     <ListItem key={item} color="grey">
-                        <a href={`#${item.split(' ').join('')}`}>{item}</a>
+                        <Link to={`#${item.split(' ').join('')}`}>{item}</Link>
                     </ListItem>
                 ))}
             </List>
