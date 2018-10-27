@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <Box>
             <Section>
-                <HeroText color="darkGrey" textAlign="center" fontWeight="bold">
+                <HeroText letterSpacing="-0.05em" color="darkGrey" textAlign="center" fontWeight="bold">
                     Design & Build Better, Smarter, and Faster in Sketch and React.
                 </HeroText>
                 <BodyText textAlign="center">

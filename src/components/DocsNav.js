@@ -54,6 +54,7 @@ export default function DocsNav() {
         <Box
             position="fixed"
             width={246}
+            pt={2}
             mr={2}
             borderColor="lightGrey"
             borderRight="1px dotted"

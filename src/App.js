@@ -6,42 +6,29 @@ import Home from './pages/Home';
 import StyleGuide from './pages/Styleguide';
 import Nav from './components/Nav';
 import Examples from './pages/Examples';
+import { Box } from 'cabana-react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+
 injectGlobal`
 body {
     margin: 0;
 }`;
 
 class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            page: 'home',
-        };
-    }
-    handleNavChange(page) {
-        this.setState({ page: page });
-    }
-
-    renderPage(page) {
-        switch (page) {
-            case 'components':
-                return <StyleGuide />;
-            case 'examples':
-                return <Examples />;
-            default:
-                return <Home />;
-        }
-    }
-
     render() {
-        const { page } = this.state;
         return (
-            <ThemeProvider theme={theme}>
-                <main>
-                    <Nav onClick={this.handleNavChange.bind(this)}>Nav</Nav>
-                    {this.renderPage(page)}
-                </main>
-            </ThemeProvider>
+            <Router>
+                <ThemeProvider theme={theme}>
+                    <Box is="main" pt={56}>
+                        <Nav />
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/examples" component={Examples} />
+                            <Route path="/components" component={StyleGuide} />
+                        </Switch>
+                    </Box>
+                </ThemeProvider>
+            </Router>
         );
     }
 }

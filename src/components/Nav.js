@@ -1,7 +1,28 @@
 import React from 'react';
 import { Box, TextPrimitive, BodyText } from 'cabana-react';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import { themeGet } from 'styled-system';
 
-const NavButton = props => <BodyText is="a" borderRadius="none" borderColor="red" {...props} />;
+const StyledNavButton = styled(NavLink)`
+    text-decoration: none;
+    color: ${themeGet('colors.grey', 'grey')};
+    padding: ${themeGet('space.1')}px;
+
+    &.is-active {
+        color: ${themeGet('colors.primary')};
+        border-bottom: 2px solid ${themeGet('colors.primary')};
+    }
+    &:hover {
+        color: ${themeGet('colors.darkGrey')};
+    }
+`;
+
+const NavButton = props => (
+    <StyledNavButton activeClassName="is-active" to={props.to}>
+        <BodyText is="span">{props.children}</BodyText>
+    </StyledNavButton>
+);
 
 const Logo = props => (
     <svg width={props.size} height={props.size} {...props} viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
@@ -35,23 +56,38 @@ const Logo = props => (
         </g>
     </svg>
 );
-export default function Home({ onClick }) {
+export default function Home() {
     return (
-        <Box bg="white" p={2} boxShadow={20} display="flex" justifyContent="space-between" alignItems="center">
+        <Box
+            bg="white"
+            p={2}
+            top={0}
+            boxShadow={20}
+            position="fixed"
+            height="40px"
+            zIndex={2}
+            width={'100%'}
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+        >
             <BodyText display="inline-block" color="grey" m={0}>
-                <NavButton onClick={onClick.bind(this, 'home')}>
+                <NavLink style={{ textDecoration: 'none', color: 'inherit' }} to="/">
                     <Logo size="20" style={{ verticalAlign: 'sub' }} />{' '}
                     <TextPrimitive fontWeight="bold" color="darkGrey">
                         Cabana
                     </TextPrimitive>{' '}
                     React
-                </NavButton>
+                </NavLink>
             </BodyText>
             <div>
-                <NavButton onClick={onClick.bind(this, 'examples')} mr={2}>
+                <NavButton to="/guides" mr={2}>
+                    Guides
+                </NavButton>
+                <NavButton to="/examples" mr={2}>
                     Examples
                 </NavButton>
-                <NavButton onClick={onClick.bind(this, 'components')}>Components</NavButton>
+                <NavButton to="/components">Components</NavButton>
             </div>
         </Box>
     );
