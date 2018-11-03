@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, TextPrimitive, BodyText } from 'cabana-react';
+import { Box, TextPrimitive, BodyText, SmallText } from 'cabana-react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { themeGet } from 'styled-system';
@@ -56,7 +56,7 @@ const Logo = props => (
         </g>
     </svg>
 );
-export default function Home() {
+export default function Home({ onThemeChange }) {
     return (
         <Box
             bg="white"
@@ -66,20 +66,31 @@ export default function Home() {
             position="fixed"
             height="40px"
             zIndex={2}
-            width={'100%'}
+            width={'calc(100% - 32px)'}
             display="flex"
             justifyContent="space-between"
             alignItems="center"
         >
-            <BodyText display="inline-block" color="grey" m={0}>
+            <BodyText display="inline-block" color="grey" m={0} flex="1 0 auto">
                 <NavLink style={{ textDecoration: 'none', color: 'inherit' }} to="/">
                     <Logo size="20" style={{ verticalAlign: 'sub' }} />{' '}
                     <TextPrimitive fontWeight="bold" color="darkGrey">
                         Cabana
                     </TextPrimitive>{' '}
                     React
+                    <TextPrimitive color="tertiary" fontSize="tiny" fontWeight="bold">
+                        ALPHA
+                    </TextPrimitive>
                 </NavLink>
             </BodyText>
+            <div>
+                <SmallText>Theme:</SmallText>
+                <select onChange={onThemeChange} defaultValue="default">
+                    <option value="default">Default</option>
+                    <option value="telco">Telco</option>
+                    <option value="bain">Bain</option>
+                </select>
+            </div>
             <div>
                 <NavButton to="/guides" mr={2}>
                     Guides

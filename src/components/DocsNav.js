@@ -1,4 +1,4 @@
-import { Box, CaptionText, LeadText } from 'cabana-react';
+import { Box, CaptionText } from 'cabana-react';
 import { borderBottom, borderColor, color, fontFamily, fontWeight, space } from 'styled-system';
 import React from 'react';
 import styled from 'styled-components';
@@ -51,16 +51,7 @@ const todoItems = ['DatePickers', 'Dropdowns', 'Map', 'Menus', 'Modal', 'Sliders
 
 export default function DocsNav() {
     return (
-        <Box
-            position="fixed"
-            width={246}
-            pt={2}
-            mr={2}
-            borderColor="lightGrey"
-            borderRight="1px dotted"
-            height="100%"
-            css="overflow: auto"
-        >
+        <Box position="fixed" width={246} pt={2} mr={2} height="100%" css="overflow: auto">
             <CaptionText fontWeight="bold" px={1} color="lightGrey">
                 Components
             </CaptionText>
