@@ -77,14 +77,22 @@ const defaultTheme = {
 };
 
 const bainTheme = {
+    ...defaultTheme,
     fonts: {
         default: '"Graphik", sans-serif',
     },
     colors: {
         primary: '#CC0000',
     },
+    radii: {
+        none: '0',
+        small: '0px',
+        medium: '10px',
+        large: '100px',
+    },
 };
 const telcoTheme = {
+    ...defaultTheme,
     fonts: {
         default: '"Hind", sans-serif',
     },
