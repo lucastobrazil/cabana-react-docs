@@ -3,6 +3,7 @@ import { borderBottom, borderColor, color, fontFamily, fontWeight, space } from 
 import React from 'react';
 import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
+import { makeHashLink } from '../services';
 const List = styled.ul`
     ${fontFamily};
     padding: 0;
@@ -58,7 +59,7 @@ export default function DocsNav() {
             <List fontFamily="default" m={0}>
                 {items.map(item => (
                     <ListItem key={item} color="grey">
-                        <Link to={`#${item.split(' ').join('')}`}>{item}</Link>
+                        <Link to={`#${makeHashLink(item)}`}>{item}</Link>
                     </ListItem>
                 ))}
             </List>
@@ -68,7 +69,7 @@ export default function DocsNav() {
                 </CaptionText>
                 {todoItems.map(item => (
                     <ListItem key={item} color="grey">
-                        <Link to={`#${item.split(' ').join('')}`}>{item}</Link>
+                        <Link to={`#${makeHashLink(item)}`}>{item}</Link>
                     </ListItem>
                 ))}
             </List>

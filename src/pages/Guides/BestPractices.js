@@ -10,9 +10,9 @@ const Callout = props => (
     <P border="1px solid" borderColor="tertiary" p={1} borderRadius="small" bg="tertiary" color="white" {...props} />
 );
 
-export default function BestPractices() {
+export default function BestPractices(props) {
     return (
-        <Section>
+        <Section id={props.title}>
             <SectionHeading>Best Practices</SectionHeading>
             <SubHeading my={1}>1. Communicate with your Designer!</SubHeading>
             <P color="grey" mb={2}>

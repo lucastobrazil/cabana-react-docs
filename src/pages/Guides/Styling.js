@@ -3,9 +3,9 @@ import { BodyText } from 'cabana-react';
 
 import Section, { SectionHeading, SubHeading } from '../../components/Section';
 
-export default function Styling() {
+export default function Styling(props) {
     return (
-        <Section>
+        <Section id={props.title}>
             <SectionHeading>Styling</SectionHeading>
             <BodyText>
                 With Cabana in your project, you're completely free to build components how ever you like. That said, if

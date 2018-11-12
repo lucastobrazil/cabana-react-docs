@@ -2,9 +2,9 @@ import React from 'react';
 import Section, { SectionHeading, P, Code, TextLink } from '../../components/Section';
 import CodeExample from '../../components/CodeExample';
 
-export default function Theming() {
+export default function Theming(props) {
     return (
-        <Section>
+        <Section id={props.title}>
             <SectionHeading>Theming</SectionHeading>
             <P>
                 Most visual style properties are set in one central location of your code; the <Code>theme.js</Code>{' '}

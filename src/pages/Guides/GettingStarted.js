@@ -3,9 +3,9 @@ import { Box, BodyText, Card, CardTitle, CardImage, Button } from 'cabana-react'
 import { Install } from '../Home/sections';
 import CodeExample from '../../components/CodeExample';
 import Section, { SectionHeading, SubHeading, Code } from '../../components/Section';
-export default function GettingStarted() {
+export default function GettingStarted(props) {
     return (
-        <Section>
+        <Section id={props.title}>
             <SectionHeading>Getting Started</SectionHeading>
             <SubHeading>Install</SubHeading>
             <Install />
