@@ -7,6 +7,7 @@ import StyleGuide from './pages/Styleguide';
 import Nav from './components/Nav';
 import Examples from './pages/Examples';
 import Guides from './pages/Guides/index';
+import Footer from './components/Footer';
 import { Box } from 'cabana-react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -51,6 +52,7 @@ class App extends React.Component {
                             <Route path="/examples" component={Examples} />
                             <Route path="/components" component={StyleGuide} />
                         </Switch>
+                        <Footer />
                     </Box>
                 </ThemeProvider>
             </Router>
