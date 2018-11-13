@@ -1,4 +1,4 @@
-const defaultTheme = {
+const theme = {
     space: [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96],
     fonts: {
         default: '"SF Pro Text", Poppins, "Avenir Next", Helvetica, sans-serif',
@@ -76,29 +76,4 @@ const defaultTheme = {
     avatarSizes: { smaller: '24px', small: '32px', medium: '48px', large: '64px', jumbo: '80px' },
 };
 
-const bainTheme = {
-    ...defaultTheme,
-    fonts: {
-        default: '"Graphik", sans-serif',
-    },
-    colors: {
-        primary: '#CC0000',
-    },
-    radii: {
-        none: '0',
-        small: '0px',
-        medium: '10px',
-        large: '100px',
-    },
-};
-const telcoTheme = {
-    ...defaultTheme,
-    fonts: {
-        default: '"Hind", sans-serif',
-    },
-    colors: {
-        primary: '#FFC726',
-    },
-};
-export default defaultTheme;
-export { bainTheme, telcoTheme };
+export default theme;

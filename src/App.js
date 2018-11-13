@@ -1,12 +1,12 @@
 import { ThemeProvider, injectGlobal } from 'styled-components';
 
 import React from 'react';
-import defaultTheme, { bainTheme, telcoTheme } from './theme';
-import Home from './pages/Home/index';
+import cabanaDefaultTheme, { bainTheme, telcoTheme } from './docsTheme';
+import Home from './pages/Home';
 import StyleGuide from './pages/Styleguide';
 import Nav from './components/Nav';
 import Examples from './pages/Examples';
-import Guides from './pages/Guides/index';
+import Guides from './pages/Guides';
 import Footer from './components/Footer';
 import { Box } from 'cabana-react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
@@ -20,7 +20,7 @@ class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            theme: defaultTheme,
+            theme: cabanaDefaultTheme,
         };
     }
 
@@ -31,7 +31,7 @@ class App extends React.Component {
             case 'telco':
                 return telcoTheme;
             default:
-                return defaultTheme;
+                return cabanaDefaultTheme;
         }
     }
 
