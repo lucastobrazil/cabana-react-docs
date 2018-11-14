@@ -28,6 +28,7 @@ class StatefulCheckbox extends React.Component {
                 label={label}
                 checked={this.state.checked}
                 onChange={this.handleChange}
+                py={1}
             />
         );
     }

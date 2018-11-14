@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, TextInput, Card, Button, HeadingFour, SmallText } from 'cabana-react';
+import { Box, TextInput, Card, CardBodyText, CardImage, Button, HeadingFour, SmallText } from 'cabana-react';
 
-import Section, { SectionHeading, SubHeading, SectionGrid, P, TextLink } from '../../components/Section';
+import Section, { SectionHeading, SubHeading, SectionGrid, P, TextLink, Blockquote } from '../../components/Section';
 import CodeExample from '../../components/CodeExample';
 
 const ButtonPrimary = props => <Button bg="tertiary" fontWeight="bold" {...props} />;
@@ -39,23 +39,24 @@ export default function BestPractices(props) {
 };
 // 32px padding
 <TextInput p={4} />`}</CodeExample>
-                    <TextInput p={3} placeholder="Input Text" mt={2} width="100%" />
+                    <TextInput p={3} placeholder="Input Text" mt={2} width="150px" />
                 </SectionGrid>
                 <SectionGrid>
                     <img src={require('../../images/input_metrics.png')} style={{ maxWidth: '100%' }} />
                 </SectionGrid>
             </Card>
             <Callout my={2}>
-                Tip: you can also change the units to be based on any units you want. They don't even need to be the
-                same multiples.
+                Tip: you can also change the pixel units to be based on any scale you want. They don't even need to be
+                multiples of the same number.
             </Callout>
             <P>
                 In early stages of design – Designers and Devs should keep an open dialogue about the product's overall
                 visual style, metaphors and heirarchy of components.
             </P>
-            <blockquote>
-                Here's the color palette, here are the base font sizes for each level, here are the spacing values
-            </blockquote>
+            <Blockquote>
+                Here's the color palette, here are the base font sizes for each level, here are the different border
+                radii and here is the spacing scale.
+            </Blockquote>
             <SubHeading>2. Define your own components</SubHeading>
             <P>
                 In many cases, you'll end up customising the Cabana components to have a certain visual style. To save
@@ -96,8 +97,43 @@ const App = () => (
             <Callout>
                 When deciding which props to set in your component definition and which to pass in as props, try to
                 think about your component's API from the perspective of <em>"which props are fixed?"</em> and{' '}
-                <em>which props will our design system let the user decide case-by-case?"</em>
+                <em>which props will our design system let the designer/developer decide case-by-case?"</em>
             </Callout>
+            <Blockquote>
+                Designer: Our cards can have an alternative background color - the default is white and when it's
+                inactive, it is grey.
+            </Blockquote>
+
+            <CodeExample>
+                {`import { Card } from 'cabana-react'; 
+
+const MyCard = props => <Card boxShadow="large" bg={props.bg} />;
+
+MyCard.defaultProps = {
+    bg: "white",
+};
+
+// Now the developer can set the bg color based on the isInactive prop
+<MyCard bg={isInactive && 'lightGrey'} />
+
+// Alternative - here the card would need to handle the isActive prop internally
+<MyCard isActive={false} />
+            `}
+            </CodeExample>
+            <Box display="grid" style={{ gridTemplateColumns: '1fr 1fr 1fr', gridColumnGap: '20px' }} mt={2}>
+                <Card>
+                    <CardImage src="https://tinyurl.com/yc9dz9xu" />
+                    <CardBodyText>Active (default)</CardBodyText>
+                </Card>
+                <Card bg="lightGrey">
+                    <CardImage src="https://tinyurl.com/yc9dz9xu" />
+                    <CardBodyText>Inactive</CardBodyText>
+                </Card>
+            </Box>
+            <P mt={4}>
+                This is a simplified example, but it illustrates the recommended practice of choosing what options to
+                'expose' in your component's API and how that relates to the rules set in the design system.
+            </P>
         </Section>
     );
 }

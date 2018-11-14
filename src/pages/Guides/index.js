@@ -12,6 +12,15 @@ const Item = props => (
     <Button boxShadow={100} bg="white" borderRadius="small" color="primary" py={2} textAlign="center" {...props} />
 );
 
+const sections = {
+    theming: 'Theming',
+    styling: 'Styling',
+    bestPractices: 'Best Practices',
+    gettingStarted: 'Getting Started',
+};
+
+const InnerLink = ({ to }) => <Link to={`#${to}`} children={to} />;
+
 export default function Guides() {
     return (
         <React.Fragment>
@@ -26,17 +35,23 @@ export default function Guides() {
                     }}
                 >
                     <Item>
-                        <Link to="#getting">Getting Started</Link>
+                        <InnerLink to={sections.gettingStarted} />
                     </Item>
-                    <Item>Styling</Item>
-                    <Item>Theming</Item>
-                    <Item>Best Practices</Item>
+                    <Item>
+                        <InnerLink to={sections.styling} />
+                    </Item>
+                    <Item>
+                        <InnerLink to={sections.theming} />
+                    </Item>
+                    <Item>
+                        <InnerLink to={sections.bestPractices} />
+                    </Item>
                 </div>
             </Section>
-            <GettingStarted />
-            <Styling />
-            <Theming />
-            <BestPractices />
+            <GettingStarted title={sections.gettingStarted} />
+            <Styling title={sections.styling} />
+            <Theming title={sections.theming} />
+            <BestPractices title={sections.bestPractices} />
         </React.Fragment>
     );
 }

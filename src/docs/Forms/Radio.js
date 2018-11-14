@@ -33,12 +33,14 @@ class StatefulRadioButtons extends React.Component {
                     label="Obi Wan Kenobi"
                     checked={this.state.selected === 'obi_wan'}
                     onChange={this.handleChange}
+                    py={1}
                 />
                 <Radio
                     value="han_solo"
                     label="Han Solo"
                     checked={this.state.selected === 'han_solo'}
                     onChange={this.handleChange}
+                    py={1}
                 />
                 <Radio
                     value="anakin_skywalker"
@@ -47,6 +49,7 @@ class StatefulRadioButtons extends React.Component {
                     disabled
                     checked={this.state.selected === 'anakin_skywalker'}
                     onChange={this.handleChange}
+                    py={1}
                 />
             </Box>
         );

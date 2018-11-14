@@ -16,17 +16,16 @@ import {
 import { IconHeart } from 'cabanaico';
 import { Gradient } from '../../components/Svg';
 import styled from 'styled-components';
-import Section, { SectionGrid, TextLink } from '../../components/Section';
+import Section, { SectionGrid, TextLink, SectionHeading, SubHeading } from '../../components/Section';
 import CodeExample from '../../components/CodeExample';
 import { CardBodyText } from 'cabana-react/build/components/Card';
+import Logo from '../../components/Logo';
 
 const ListItem = props => <TextPrimitive color="inherit" is="li" {...props} />;
-const H4 = props => <HeadingFour mb={2} {...props} />;
 
 const GradientBg = styled(Gradient)`
-    transform: scaley(-1);
+    transform: scaleY(-1);
     width: 100%;
-    height: 250px;
     vertical-align: bottom;
 `;
 
@@ -35,6 +34,12 @@ const StyledCard = styled(Card)`
         text-decoration: underline;
     }
 `;
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: inherit;
+`;
+
 const BlogPostCard = props => (
     <StyledCard m={2} borderColor="transparent">
         <CardImage
@@ -51,7 +56,17 @@ const BlogPostCard = props => (
 );
 const Intro = () => (
     <React.Fragment>
-        <Section>
+        <Box width="100%" height="100%">
+            <GradientBg />
+        </Box>
+        <Section
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            // height="calc(100vh - 362px)"
+            mt={-12}
+        >
             <HeadingOne
                 fontSize={['h2', 'h1']}
                 my={8}
@@ -59,8 +74,9 @@ const Intro = () => (
                 color="darkGrey"
                 textAlign="center"
                 fontWeight="bold"
+                maxWidth={680}
             >
-                A design system built especially for React and Sketch.
+                A design system built especially for Sketch and React.
             </HeadingOne>
             <BodyText textAlign="center" mb={4}>
                 Built with React,{' '}
@@ -80,55 +96,31 @@ const Intro = () => (
                 >
                     GitHub
                 </Button>
-                <Button bg="white" color="primary" display="block">
-                    <Link to="/guides">Guides</Link>
+                <Button bg="white" color="primary" display="block" border="1px solid" borderColor="primary">
+                    <StyledLink to="/guides">Guides</StyledLink>
                 </Button>
             </Box>
         </Section>
-        <Box width="100%" height="100%">
-            <GradientBg />
-        </Box>
-    </React.Fragment>
-);
-
-const DevDesigners = () => (
-    <React.Fragment>
-        <Box bg="primary" color="white">
-            <Section display="flex">
-                <SectionGrid>
-                    <HeadingThree>For Designers</HeadingThree>
-                    <ul>
-                        <ListItem>Sketch Library with powerful customisation</ListItem>
-                        <ListItem>
-                            Flexible visual style, whilst also keeping design system ‘rules’ under control
-                        </ListItem>
-                    </ul>
-                </SectionGrid>
-                <SectionGrid>
-                    <HeadingThree>For Developers</HeadingThree>
-                    <ul>
-                        <ListItem>Build your own React components or use the default</ListItem>
-                        <ListItem>Works out of the box</ListItem>
-                        <ListItem>Flexible and Composable</ListItem>
-                    </ul>
-                </SectionGrid>
-            </Section>
-        </Box>
         <Section>
-            <HeadingThree mb={2} textAlign="center" fontWeight="bold">
-                Sketch ↔️ React
-            </HeadingThree>
             <Box display="flex">
                 <SectionGrid>
-                    <H4>Configure Sketch Symbol</H4>
+                    <HeadingFour textAlign="center" mt={0}>
+                        Sketch
+                    </HeadingFour>
                     <ul>
-                        <ListItem>Symbol overrides allow you to select pre-set layer styles etc</ListItem>
+                        <ListItem>Symbol overrides allow you to select pre-set layer styles etc.</ListItem>
                         <ListItem>Full control over content / iconography etc.</ListItem>
                     </ul>
                     <img style={{ maxWidth: '100%' }} src={require('../../images/example_button.png')} />
                 </SectionGrid>
                 <SectionGrid>
-                    <H4>Configure Component Instance</H4>
+                    <HeadingFour textAlign="center" mt={0}>
+                        React
+                    </HeadingFour>
+                    <ul>
+                        <ListItem>Import named components that match the Sketch symbols.</ListItem>
+                        <ListItem>Create instances for your app.</ListItem>
+                    </ul>
                     <CodeExample>
                         {`
 // Reads from theme.js file
@@ -144,19 +136,51 @@ const MyButton = (
 );
         `}
                     </CodeExample>
-                    <Button bg="primary" color="white">
+                    <Button bg="primary" color="white" mt={1}>
                         <IconHeart /> Like
                     </Button>
                 </SectionGrid>
             </Box>
         </Section>
+    </React.Fragment>
+);
+
+const WhyCabana = () => (
+    <Box bg="primary" color="white" pb={3} display="flex" flexWrap="wrap" justifyContent="center">
+        <Logo width={80} height={80} />
+        <SectionHeading mt={0} textAlign="center" flex="0 0 100%">
+            Why Cabana?
+        </SectionHeading>
         <Section display="flex">
             <SectionGrid>
-                <H4>Sketch Layer Styles</H4>
+                <HeadingThree>For Designers</HeadingThree>
+                <ul>
+                    <ListItem>Sketch Library with powerful customisation</ListItem>
+                    <ListItem>Flexible visual style, whilst also keeping design system ‘rules’ under control</ListItem>
+                </ul>
+            </SectionGrid>
+            <SectionGrid>
+                <HeadingThree>For Developers</HeadingThree>
+                <ul>
+                    <ListItem>Build your own React components or use the default</ListItem>
+                    <ListItem>Works out of the box</ListItem>
+                    <ListItem>Flexible and Composable</ListItem>
+                </ul>
+            </SectionGrid>
+        </Section>
+    </Box>
+);
+
+const MoreExamples = () => (
+    <Box bg="#fafafa" py={3}>
+        <SectionHeading textAlign="center">Sketch Library and Theme</SectionHeading>
+        <Section display="flex">
+            <SectionGrid>
+                <HeadingThree mb={1}>Sketch Layer Styles</HeadingThree>
                 <img style={{ maxWidth: 300 }} src={require('../../images/colors_sketch.png')} />
             </SectionGrid>
             <SectionGrid>
-                <H4>Theme JS object</H4>
+                <HeadingThree mb={1}>Theme JS object</HeadingThree>
                 <CodeExample>
                     {`
 const theme = {
@@ -179,15 +203,15 @@ const theme = {
         <Button bg="primary" color="white" display="block" my={8} mx="auto">
             Check out the guides
         </Button>
-    </React.Fragment>
+    </Box>
 );
 
 const BlogPosts = () => (
     <Box bg="tertiary">
         <Section>
-            <HeadingFour mb={2} textAlign="center" color="white">
+            <SubHeading mb={2} textAlign="center" color="white">
                 Blog Posts
-            </HeadingFour>
+            </SubHeading>
             <Box display="flex">
                 <BlogPostCard title="Introducing Cabana for React" imageSrc="" />
                 <BlogPostCard title="Getting started with Styled-System" imageSrc="" />
@@ -201,20 +225,18 @@ const Install = () => <CodeExample>{`npm install --save cabana-react`}</CodeExam
 
 const GetStarted = () => (
     <Box py={4}>
-        <HeadingThree textAlign="center" fontWeight="bold">
-            Get Started
-        </HeadingThree>
+        <SectionHeading textAlign="center">Get Started</SectionHeading>
         <Section display="flex">
             <SectionGrid>
-                <H4 mb={1}>React</H4>
+                <HeadingThree mb={1}>Sketch</HeadingThree>
+                <TextLink href="https://cabanadesignsystem.com/">Download Sketch Library</TextLink>
+            </SectionGrid>
+            <SectionGrid>
+                <HeadingThree mb={1}>React</HeadingThree>
                 <Install />
                 <Button mt={2} color="primary">
                     Getting started guide
                 </Button>
-            </SectionGrid>
-            <SectionGrid>
-                <H4 mb={1}>Sketch</H4>
-                <TextLink href="https://cabanadesignsystem.com/">Download Sketch Library</TextLink>
             </SectionGrid>
         </Section>
     </Box>
@@ -222,9 +244,7 @@ const GetStarted = () => (
 
 const Story = () => (
     <Section>
-        <HeadingThree textAlign="center" fontWeight="bold">
-            Concept
-        </HeadingThree>
+        <SectionHeading textAlign="center">Concept</SectionHeading>
         <BodyText>
             Coming up with a design system takes a lot of work, but once you're up and running, how do you execute it?
         </BodyText>
@@ -251,4 +271,4 @@ const Story = () => (
     </Section>
 );
 
-export { Intro, DevDesigners, BlogPosts, Story, GetStarted, Install };
+export { Intro, MoreExamples, BlogPosts, Story, GetStarted, Install, WhyCabana };

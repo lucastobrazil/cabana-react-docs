@@ -1,7 +1,7 @@
 import React from 'react';
 import Section, { SectionHeading, P, Code, TextLink } from '../../components/Section';
 import CodeExample from '../../components/CodeExample';
-
+import { HashLink as Link } from 'react-router-hash-link';
 export default function Theming(props) {
     return (
         <Section id={props.title}>
@@ -40,9 +40,10 @@ const App = () => (
     </ThemeProvider>
 );
 `}</CodeExample>
-            <ul>
-                <li>Bg, color, </li>
-            </ul>
+            <P mt={2}>
+                You can find the source file for the default theme object{' '}
+                <Link to="https://github.com/lucastobrazil/cabana-react">on Github</Link>
+            </P>
         </Section>
     );
 }

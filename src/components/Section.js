@@ -24,6 +24,11 @@ const Code = props => (
 
 const P = props => <BodyText pb={2} {...props} />;
 
+const Blockquote = props => (
+    <Box is="blockquote" fontSize="lead" color="grey" fontFamily="alt" style={{ fontStyle: 'italic' }} {...props}>
+        "{props.children}"
+    </Box>
+);
 const TextLink = styled(TextPrimitive)`
     &:hover {
         text-decoration: underline;
@@ -37,4 +42,4 @@ TextLink.defaultProps = {
 };
 
 export default Section;
-export { SectionHeading, SubHeading, SectionGrid, Code, P, TextLink };
+export { SectionHeading, SubHeading, SectionGrid, Code, P, TextLink, Blockquote };

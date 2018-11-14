@@ -50,6 +50,7 @@ export default function FormsDocs() {
                     gridColumnGap: 16,
                     gridRowGap: 16,
                     alignItems: 'center',
+                    marginTop: 32,
                 }}
             >
                 <div>
