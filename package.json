@@ -19,19 +19,20 @@
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-react": "^6.24.1",
+        "cabana-react": "0.0.5",
         "css-loader": "^0.28.0",
         "enzyme": "^2.8.1",
         "expect": "^1.20.2",
-        "express": "^4.15.2",
+        "express": "^4.16.4",
         "file-loader": "^2.0.0",
         "mocha": "^3.2.0",
-        "node-sass": "^4.5.2",
+        "node-sass": "^4.10.0",
         "prop-types": "^15.5.8",
-        "react": "^16.5.0",
-        "react-dom": "^16.5.0",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3",
         "react-router": "^4.3.1",
         "react-router-dom": "^4.3.1",
-        "react-router-hash-link": "^1.2.0",
+        "react-router-hash-link": "^1.2.1",
         "react-syntax-highlighter": "^9.0.1",
         "sass-loader": "^6.0.3",
         "style-loader": "^0.16.1",
@@ -52,6 +53,6 @@
         "react-test-renderer": "^15.5.4",
         "webpack-dev-middleware": "^1.10.1",
         "webpack-dev-server": "^2.4.2",
-        "webpack-hot-middleware": "^2.18.0"
+        "webpack-hot-middleware": "^2.24.3"
     }
 }

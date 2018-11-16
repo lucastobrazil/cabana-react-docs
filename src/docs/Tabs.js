@@ -1,7 +1,8 @@
 import Docs from './docs';
 import React from 'react';
 import { Tabs, HeadingTwo } from 'cabana-react';
-import { IconHeart, IconTwitter } from 'cabanaico';
+// import { IconHeart, IconCabanaTwitter } from 'cabanaico';
+import IconCabanaTwitter from '../components/TempIcon';
 export default function TabsDocs() {
     return (
         <Docs title="Tabs">
@@ -23,16 +24,16 @@ export default function TabsDocs() {
                 With Icon
             </HeadingTwo>
             <Tabs>
-                <div label="News" tabIcon={<IconHeart />}>
+                {/* <div label="News" tabIcon={<IconHeart />}>
                     I like a lot of things
-                </div>
-                <div label="Store" tabIcon={<IconTwitter />}>
+                </div> */}
+                <div label="Store" tabIcon={<IconCabanaTwitter />}>
                     Connected: Twitter account
                 </div>
-                <div label="Videos" tabIcon={<IconTwitter />}>
+                <div label="Videos" tabIcon={<IconCabanaTwitter />}>
                     Connected: Twitter account
                 </div>
-                <div label="Photos" tabIcon={<IconTwitter />}>
+                <div label="Photos" tabIcon={<IconCabanaTwitter />}>
                     Connected: Twitter account
                 </div>
             </Tabs>

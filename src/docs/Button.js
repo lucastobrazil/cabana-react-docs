@@ -1,5 +1,6 @@
 import { Button, ButtonLarge, ButtonSmall } from 'cabana-react';
-import { IconTwitter, IconHeart } from 'cabanaico';
+// import { IconCabanaTwitter, IconHeart } from 'cabanaico';
+import IconCabanaTwitter from '../components/TempIcon';
 import Docs from './docs';
 import DocLabel from '../components/DocLabel';
 import React from 'react';
@@ -31,12 +32,12 @@ export default function ButtonDocs() {
                         </td>
                         <td>
                             <ButtonSmall {...primaryProps}>
-                                <IconTwitter /> Button
+                                <IconCabanaTwitter /> Button
                             </ButtonSmall>
                         </td>
                         <td>
                             <ButtonSmall {...primaryProps}>
-                                Button <IconTwitter />
+                                Button <IconCabanaTwitter />
                             </ButtonSmall>
                         </td>
                     </tr>
@@ -49,12 +50,12 @@ export default function ButtonDocs() {
                         </td>
                         <td>
                             <Button {...primaryProps}>
-                                <IconTwitter /> Button
+                                <IconCabanaTwitter /> Button
                             </Button>
                         </td>
                         <td>
                             <Button {...primaryProps}>
-                                Button <IconTwitter />
+                                Button <IconCabanaTwitter />
                             </Button>
                         </td>
                     </tr>
@@ -69,12 +70,12 @@ export default function ButtonDocs() {
                         </td>
                         <td>
                             <ButtonLarge {...primaryProps} fontWeight="bold">
-                                <IconTwitter /> Button
+                                <IconCabanaTwitter /> Button
                             </ButtonLarge>
                         </td>
                         <td>
                             <ButtonLarge {...primaryProps} fontWeight="bold">
-                                Button <IconHeart />
+                                Button <IconCabanaTwitter />
                             </ButtonLarge>
                         </td>
                     </tr>
@@ -90,12 +91,12 @@ export default function ButtonDocs() {
                         </td>
                         <td>
                             <Button bg="success" color="error">
-                                <IconHeart /> Button
+                                <IconCabanaTwitter /> Button
                             </Button>
                         </td>
                         <td>
                             <ButtonLarge bg="tertiary" color="warning">
-                                <IconHeart /> Button
+                                <IconCabanaTwitter /> Button
                             </ButtonLarge>
                         </td>
                     </tr>

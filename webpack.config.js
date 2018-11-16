@@ -20,10 +20,10 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.scss'],
-        alias: {
-            // todo this can probs be moved when not using symlink locally
-            'styled-components': path.resolve('./node_modules/styled-components'),
-        },
+        // alias: {
+        //     // todo this can probs be moved when not using symlink locally
+        //     'styled-components': path.resolve('./node_modules/styled-components'),
+        // },
     },
     output: {
         path: path.join(__dirname, '/dist'),
