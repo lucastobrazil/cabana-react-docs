@@ -53,12 +53,19 @@ export default function Home({ onThemeChange }) {
                 </NavLink>
             </BodyText>
             <div>
+                <a href="https://spectrum.chat/cabana-designsystem" target="_blank">
+                    Join the Community
+                </a>
+            </div>
+            <div>
                 <SmallText>Theme:</SmallText>
-                <select onChange={onThemeChange} defaultValue="default">
-                    <option value="default">Default</option>
-                    <option value="telco">Telco</option>
-                    <option value="bain">Bain</option>
-                </select>
+                {process.env !== 'production' && (
+                    <select onChange={onThemeChange} defaultValue="default">
+                        <option value="default">Default</option>
+                        <option value="telco">Telco</option>
+                        <option value="bain">Bain</option>
+                    </select>
+                )}
             </div>
             <div>
                 <NavButton to="/guides" mr={2}>
