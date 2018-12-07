@@ -18,7 +18,6 @@ import TagsDocs from '../docs/Tags';
 export default function StyleGuide() {
     return (
         <Box display="flex">
-            {/* <GlobalStyle /> */}
             <DocsNav />
             <Box ml={246} maxWidth={900} px={4}>
                 <AvatarDocs />
