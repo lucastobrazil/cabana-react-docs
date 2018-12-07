@@ -67,11 +67,12 @@ const App = () => (
                         Creating an instance of the <Code>Card</Code> component and its children
                     </li>
                     <li>
-                        Configuring the element type using the <Code>is</Code> prop, the text alignment and the box
+                        Configuring the HTML element type using the <Code>is</Code> prop, the text alignment and the box
                         shadow. It's up to you how many props you customise - the cool thing about react-cabana is that
                         all components come pre-styled too!
                     </li>
                 </ol>
+                
             </BodyText>
         </Section>
     );

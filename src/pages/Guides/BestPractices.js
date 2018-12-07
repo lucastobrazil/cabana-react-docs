@@ -7,7 +7,7 @@ import CodeExample from '../../components/CodeExample';
 const ButtonPrimary = props => <Button bg="tertiary" fontWeight="bold" {...props} />;
 const AdBox = props => <Box p={1} border="1px solid" borderColor="tertiary" {...props} />;
 const Callout = props => (
-    <P border="1px solid" borderColor="tertiary" p={1} borderRadius="small" bg="tertiary" color="white" {...props} />
+    <P border="1px solid" borderColor="tertiary" px={2} py={2} borderRadius="small" bg="tertiary" color="white" {...props} />
 );
 
 export default function BestPractices(props) {
@@ -100,7 +100,7 @@ const App = () => (
                 <em>which props will our design system let the designer/developer decide case-by-case?"</em>
             </Callout>
             <Blockquote>
-                Designer: Our cards can have an alternative background color - the default is white and when it's
+                Designer: Our cards can have one alternative background color - the default is white and when it's
                 inactive, it is grey.
             </Blockquote>
 

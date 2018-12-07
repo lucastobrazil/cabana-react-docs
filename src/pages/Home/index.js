@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box } from 'cabana-react';
+import { Button, Box } from 'cabana-react';
 import { themeGet } from 'styled-system';
 import styled from 'styled-components';
 import Section from '../../components/Section';
@@ -24,7 +24,7 @@ export default function Home() {
             <BlogPosts />
             <Story />
             <Section textAlign="right" fontSize="h5">
-                <ContinueLink to="/guides">Continue to Getting Started > </ContinueLink>
+                <ContinueLink to="/guides">Continue to Getting Started ></ContinueLink>
             </Section>
         </Box>
     );

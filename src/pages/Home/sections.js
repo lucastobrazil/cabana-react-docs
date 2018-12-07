@@ -230,14 +230,14 @@ const GetStarted = () => (
         <Section display="flex">
             <SectionGrid>
                 <HeadingThree mb={1}>Sketch</HeadingThree>
-                <TextLink href="https://cabanadesignsystem.com/">Download Sketch Library</TextLink>
+                <TextLink href="https://cabanadesignsystem.com/">Check out the Sketch Library</TextLink>
             </SectionGrid>
             <SectionGrid>
                 <HeadingThree mb={1}>React</HeadingThree>
                 <Install />
-                <Button mt={2} color="primary">
+                <StyledLink to="/guides" mt={2} color="primary">
                     Getting started guide
-                </Button>
+                </StyledLink>
             </SectionGrid>
         </Section>
     </Box>
@@ -246,29 +246,22 @@ const GetStarted = () => (
 const Story = () => (
     <Section>
         <SectionHeading textAlign="center">Concept</SectionHeading>
-        <BodyText>
-            Coming up with a design system takes a lot of work, but once you're up and running, how do you execute it?
+        <BodyText mb={1}>
+            At its heart, Cabana is a powerful Sketch-driven design system. It utilises some of Sketch's core features
+            like symbols, layer and text styles, overrides and libraries to deliver a user-friendly, maintainable design
+            system that speeds up your process - especially when starting a completely new project.
         </BodyText>
         <BodyText>
-            As your system grows, you'll notice that your language changes from 'box', 'text' etc and into more
-            metaphoric terms Like 'Card' and 'Hero Heading'. Cabana is a system that connects this language across
-            design (Sketch) and development (React).
+            Before Cabana-React - your designs had no clear way of being translated into code. Cabana React is basically
+            the React equivalent of the Cabana Sketch Library, and they are intended to work together... just like
+            designers and developers 😇
         </BodyText>
         <ul>
             <ListItem>Speaking the same language (constraints-based)</ListItem>
             <ListItem>Rapid prototyping </ListItem>
-            <ListItem>Rapid prototyping </ListItem>
             <ListItem>Theme-based design system </ListItem>
             <ListItem>DRY from the beginning</ListItem>
         </ul>
-        <Tabs>
-            <Box fontWeight="normal" fontSize="body" label="Sketch">
-                Constraint-based design
-            </Box>
-            <Box fontWeight="normal" fontSize="body" label="React">
-                Constraint-based
-            </Box>
-        </Tabs>
     </Section>
 );
 
