@@ -16,24 +16,24 @@ import AvatarDocs from '../docs/Avatars';
 import TagsDocs from '../docs/Tags';
 
 export default function StyleGuide() {
-    return (
-        <Box display="flex">
-            <DocsNav />
-            <Box ml={246} maxWidth={900} px={4}>
-                <AvatarDocs />
-                <ButtonDocs />
-                <CardDocs />
-                <ChipsDocs />
-                <FormsDocs />
-                <IconDocs />
-                <NotificationBarDocs />
-                <PaginationDocs />
-                <ProgressBarDocs />
-                <TabsDocs />
-                <TagsDocs />
-                <TextDocs />
-                <TooltipDocs />
-            </Box>
-        </Box>
-    );
+  return (
+    <Box display="flex">
+      <DocsNav />
+      <Box ml={246} maxWidth={900} px={4}>
+        <AvatarDocs />
+        <ButtonDocs />
+        <CardDocs />
+        <ChipsDocs />
+        <FormsDocs />
+        <IconDocs />
+        <NotificationBarDocs />
+        <PaginationDocs />
+        <ProgressBarDocs />
+        <TabsDocs />
+        <TagsDocs />
+        <TextDocs />
+        <TooltipDocs />
+      </Box>
+    </Box>
+  );
 }

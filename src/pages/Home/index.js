@@ -7,25 +7,25 @@ import Section from '../../components/Section';
 import { Intro, MoreExamples, BlogPosts, Story, GetStarted, WhyCabana } from './sections';
 
 const ContinueLink = styled(Link)`
-    color: ${props => themeGet('colors.primary', 'red')(props)};
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
+  color: ${props => themeGet('colors.primary', 'red')(props)};
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export default function Home() {
-    return (
-        <Box>
-            <Intro />
-            <WhyCabana />
-            <GetStarted />
-            <MoreExamples />
-            <BlogPosts />
-            <Story />
-            <Section textAlign="right" fontSize="h5">
-                <ContinueLink to="/guides">Continue to Getting Started ></ContinueLink>
-            </Section>
-        </Box>
-    );
+  return (
+    <Box>
+      <Intro />
+      <WhyCabana />
+      <GetStarted />
+      <MoreExamples />
+      <BlogPosts />
+      <Story />
+      <Section textAlign="right" fontSize="h5">
+        <ContinueLink to="/guides">Continue to Getting Started ></ContinueLink>
+      </Section>
+    </Box>
+  );
 }

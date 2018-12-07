@@ -3,19 +3,19 @@ import Section, { SectionHeading, P, Code, TextLink } from '../../components/Sec
 import CodeExample from '../../components/CodeExample';
 import { HashLink as Link } from 'react-router-hash-link';
 export default function Theming(props) {
-    return (
-        <Section id={props.title}>
-            <SectionHeading>Theming</SectionHeading>
-            <P>
-                Most visual style properties are set in one central location of your code; the <Code>theme.js</Code>{' '}
-                file. This file is the code equivalent of your Cabana Sketch Library file.
-            </P>
-            <P>
-                Under the hood, Cabana uses the <Code>ThemeProvider</Code> from styled-components and the theme
-                properties set in <TextLink href="https://github.com/jxnblk/styled-system">styled-system</TextLink>.
-                You're free to expand upon this how ever you like though!
-            </P>
-            <CodeExample>{`import { ThemeProvider } from 'styled-components';
+  return (
+    <Section id={props.title}>
+      <SectionHeading>Theming</SectionHeading>
+      <P>
+        Most visual style properties are set in one central location of your code; the <Code>theme.js</Code> file. This
+        file is the code equivalent of your Cabana Sketch Library file.
+      </P>
+      <P>
+        Under the hood, Cabana uses the <Code>ThemeProvider</Code> from styled-components and the theme properties set
+        in <TextLink href="https://github.com/jxnblk/styled-system">styled-system</TextLink>. You're free to expand upon
+        this how ever you like though!
+      </P>
+      <CodeExample>{`import { ThemeProvider } from 'styled-components';
 
 const myTheme = {
     space: [0, 8, 15, 24, 32],
@@ -40,10 +40,10 @@ const App = () => (
     </ThemeProvider>
 );
 `}</CodeExample>
-            <P mt={2}>
-                You can find the source file for the default theme object{' '}
-                <Link to="https://github.com/lucastobrazil/cabana-react">on Github</Link>
-            </P>
-        </Section>
-    );
+      <P mt={2}>
+        You can find the source file for the default theme object{' '}
+        <Link to="https://github.com/lucastobrazil/cabana-react">on Github</Link>
+      </P>
+    </Section>
+  );
 }

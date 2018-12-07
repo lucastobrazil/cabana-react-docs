@@ -47,10 +47,10 @@ class App extends React.Component {
           <Box is="main" bg="background" pt={72}>
             <Nav onThemeChange={this.toggleTheme.bind(this)} />
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/guides" component={Guides} />
-              <Route path="/examples" component={Examples} />
-              <Route path="/components" component={StyleGuide} />
+              <Route component={Home} exact path="/" />
+              <Route component={Guides} path="/guides" />
+              <Route component={Examples} path="/examples" />
+              <Route component={StyleGuide} path="/components" />
             </Switch>
             <Footer />
           </Box>
