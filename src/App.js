@@ -1,7 +1,7 @@
 import { ThemeProvider, injectGlobal } from 'styled-components';
 
 import React from 'react';
-import cabanaDefaultTheme, { bainTheme, telcoTheme } from './docsTheme';
+import cabanaDefaultTheme, { bainTheme, darkTheme } from './docsTheme';
 import Home from './pages/Home';
 import StyleGuide from './pages/Styleguide';
 import Nav from './components/Nav';
@@ -17,46 +17,46 @@ body {
 }`;
 
 class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            theme: cabanaDefaultTheme,
-        };
-    }
+  constructor() {
+    super();
+    this.state = {
+      theme: cabanaDefaultTheme,
+    };
+  }
 
-    chooseTheme(value) {
-        switch (value) {
-            case 'bain':
-                return bainTheme;
-            case 'telco':
-                return telcoTheme;
-            default:
-                return cabanaDefaultTheme;
-        }
+  chooseTheme(value) {
+    switch (value) {
+      case 'bain':
+        return bainTheme;
+      case 'dark':
+        return darkTheme;
+      default:
+        return cabanaDefaultTheme;
     }
+  }
 
-    toggleTheme(e) {
-        const value = e.target.value;
-        this.setState({ theme: this.chooseTheme(value) });
-    }
+  toggleTheme(e) {
+    const value = e.target.value;
+    this.setState({ theme: this.chooseTheme(value) });
+  }
 
-    render() {
-        return (
-            <Router>
-                <ThemeProvider theme={this.state.theme}>
-                    <Box is="main" pt={72}>
-                        <Nav onThemeChange={this.toggleTheme.bind(this)} />
-                        <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/guides" component={Guides} />
-                            <Route path="/examples" component={Examples} />
-                            <Route path="/components" component={StyleGuide} />
-                        </Switch>
-                        <Footer />
-                    </Box>
-                </ThemeProvider>
-            </Router>
-        );
-    }
+  render() {
+    return (
+      <Router>
+        <ThemeProvider theme={this.state.theme}>
+          <Box is="main" bg="background" pt={72}>
+            <Nav onThemeChange={this.toggleTheme.bind(this)} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/guides" component={Guides} />
+              <Route path="/examples" component={Examples} />
+              <Route path="/components" component={StyleGuide} />
+            </Switch>
+            <Footer />
+          </Box>
+        </ThemeProvider>
+      </Router>
+    );
+  }
 }
 export default App;
