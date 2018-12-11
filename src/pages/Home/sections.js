@@ -12,8 +12,7 @@ import {
   HeadingFour,
   Button,
 } from 'cabana-react';
-// import { IconHeart } from 'cabanaico';
-import IconHeart from '../../components/TempIcon';
+import { IconHeart } from 'cabanaico';
 import { Gradient } from '../../components/Svg';
 import styled from 'styled-components';
 import Section, { SectionGrid, TextLink, SectionHeading, SubHeading } from '../../components/Section';

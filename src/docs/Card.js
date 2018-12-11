@@ -1,6 +1,5 @@
 import { Button, ButtonSmall, Card, CardBodyText, CardFooter, CardImage, CardTitle, TinyText } from 'cabana-react';
-// import { IconCabanaTwitter } from 'cabanaico';
-import IconCabanaTwitter from '../components/TempIcon';
+import { IconHeart } from 'cabanaico';
 import Docs from './docs';
 import React from 'react';
 
@@ -25,7 +24,7 @@ export default function CardDocs() {
             {SampleBodyText}
           </CardBodyText>
           <Button bg="primary" color="white" borderRadius="large">
-            <IconCabanaTwitter />
+            <IconHeart />
             Follow me on Twitter
           </Button>
         </Card>

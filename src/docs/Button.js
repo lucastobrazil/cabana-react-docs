@@ -1,6 +1,5 @@
 import { Button, ButtonLarge, ButtonSmall } from 'cabana-react';
-// import { IconCabanaTwitter, IconHeart } from 'cabanaico';
-import IconCabanaTwitter from '../components/TempIcon';
+import { IconHeart } from 'cabanaico';
 import Docs from './docs';
 import DocLabel from '../components/DocLabel';
 import React from 'react';
@@ -32,12 +31,12 @@ export default function ButtonDocs() {
             </td>
             <td>
               <ButtonSmall {...primaryProps}>
-                <IconCabanaTwitter /> Button
+                <IconHeart /> Button
               </ButtonSmall>
             </td>
             <td>
               <ButtonSmall {...primaryProps}>
-                Button <IconCabanaTwitter />
+                Button <IconHeart />
               </ButtonSmall>
             </td>
           </tr>
@@ -50,12 +49,12 @@ export default function ButtonDocs() {
             </td>
             <td>
               <Button {...primaryProps}>
-                <IconCabanaTwitter /> Button
+                <IconHeart /> Button
               </Button>
             </td>
             <td>
               <Button {...primaryProps}>
-                Button <IconCabanaTwitter />
+                Button <IconHeart />
               </Button>
             </td>
           </tr>
@@ -70,12 +69,12 @@ export default function ButtonDocs() {
             </td>
             <td>
               <ButtonLarge {...primaryProps} fontWeight="bold">
-                <IconCabanaTwitter /> Button
+                <IconHeart /> Button
               </ButtonLarge>
             </td>
             <td>
               <ButtonLarge {...primaryProps} fontWeight="bold">
-                Button <IconCabanaTwitter />
+                Button <IconHeart />
               </ButtonLarge>
             </td>
           </tr>
@@ -91,12 +90,12 @@ export default function ButtonDocs() {
             </td>
             <td>
               <Button bg="success" color="error">
-                <IconCabanaTwitter /> Button
+                <IconHeart /> Button
               </Button>
             </td>
             <td>
               <ButtonLarge bg="tertiary" color="warning">
-                <IconCabanaTwitter /> Button
+                <IconHeart /> Button
               </ButtonLarge>
             </td>
           </tr>
