@@ -20,7 +20,7 @@
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-react": "^6.24.1",
         "cabana-react": "0.0.5",
-        "cabanaico": "0.0.1-development",
+        "cabanaico": "^0.0.1-development",
         "css-loader": "^0.28.0",
         "enzyme": "^2.8.1",
         "expect": "^1.20.2",

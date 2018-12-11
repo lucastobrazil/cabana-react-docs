@@ -1139,6 +1139,11 @@ cabana-react@0.0.5:
     styled-system "^3.1.11"
     system-components "^3.0.1"
 
+cabanaico@^0.0.1-development:
+  version "0.0.1-development"
+  resolved "https://registry.yarnpkg.com/cabanaico/-/cabanaico-0.0.1-development.tgz#495ca7e961e8fc9a49e652a15c8a0cfacc5d9a6c"
+  integrity sha512-lGAsWcq0p6uI8dw/siaRyzTlIVK54kdi828YDaN9+KTBROtgDia9V1DDXGmtgRYUwG58HdsXCpeQlQOZBKnTxg==
+
 caller-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
