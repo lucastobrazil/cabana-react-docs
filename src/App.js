@@ -2,6 +2,7 @@ import { ThemeProvider, injectGlobal } from 'styled-components';
 
 import React, { Suspense, lazy } from 'react';
 import cabanaDefaultTheme, { bainTheme, darkTheme } from './docsTheme';
+import Home from './pages/Home';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import { Box } from 'cabana-react';
