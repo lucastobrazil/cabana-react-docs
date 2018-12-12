@@ -1,39 +1,54 @@
 import React from 'react';
-import { Box } from 'cabana-react';
-import ButtonDocs from '../docs/Button';
-import CardDocs from '../docs/Card';
+import { Box, HeadingThree, HeadingFive } from 'cabana-react';
+import Button from '../docs/Button.mdx';
+import Card from '../docs/Card.mdx';
 import FormsDocs from '../docs/Forms/index';
-import IconDocs from '../docs/Icon';
+import Icon from '../docs/Icon.mdx';
 import DocsNav from '../components/DocsNav';
-import NotificationBarDocs from '../docs/NotificationBar';
-import PaginationDocs from '../docs/Pagination';
-import ProgressBarDocs from '../docs/ProgressBar';
-import TabsDocs from '../docs/Tabs';
+import NotificationBar from '../docs/NotificationBar.mdx';
+import Pagination from '../docs/Pagination.mdx';
+import ProgressBar from '../docs/ProgressBar/index.mdx';
+import Tabs from '../docs/Tabs.mdx';
 import TextDocs from '../docs/Text';
-import TooltipDocs from '../docs/Tooltip';
-import ChipsDocs from '../docs/Chips';
-import AvatarDocs from '../docs/Avatars';
-import TagsDocs from '../docs/Tags';
+import Tooltip from '../docs/Tooltip.mdx';
+import Chip from '../docs/Chip.mdx';
+import Tags from '../docs/Tags.mdx';
+import Avatars from '../docs/Avatars.mdx';
+
+import { MDXProvider } from '@mdx-js/tag';
+
+const Heading = props => <HeadingThree is="h1" pt={9} mb={2} style={{ display: 'block', borderBottom: '1px solid lightgrey' }} {...props} />;
+
+const components = {
+    h1: Heading,
+    h2: HeadingFive,
+  //   // ...
+  //   p: Text,
+  //   code: Pre,
+  //   inlineCode: Code
+};
 
 export default function StyleGuide() {
   return (
-    <Box display="flex">
-      <DocsNav />
-      <Box ml={246} maxWidth={900} px={4}>
-        <AvatarDocs />
-        <ButtonDocs />
-        <CardDocs />
-        <ChipsDocs />
-        <FormsDocs />
-        <IconDocs />
-        <NotificationBarDocs />
-        <PaginationDocs />
-        <ProgressBarDocs />
-        <TabsDocs />
-        <TagsDocs />
-        <TextDocs />
-        <TooltipDocs />
+    <MDXProvider components={components}>
+      <Box display="flex">
+        <DocsNav />
+        <Box ml={246} maxWidth={900} px={4}>
+          <Avatars />
+          <Button />
+          <Card />
+          <Chip />
+          <FormsDocs />
+          <Icon />
+          <NotificationBar />
+          <Pagination />
+          <ProgressBar />
+          <Tabs />
+          <Tags />
+          <TextDocs />
+          <Tooltip />
+        </Box>
       </Box>
-    </Box>
+    </MDXProvider>
   );
 }

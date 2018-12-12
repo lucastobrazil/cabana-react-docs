@@ -5,7 +5,7 @@ import { themeGet } from 'styled-system';
 import styled from 'styled-components';
 import Section from '../../components/Section';
 import { Intro, MoreExamples, BlogPosts, Story, GetStarted, WhyCabana } from './sections';
-
+import TestMDX from './test.mdx';
 const ContinueLink = styled(Link)`
   color: ${props => themeGet('colors.primary', 'red')(props)};
   text-decoration: none;
@@ -13,10 +13,12 @@ const ContinueLink = styled(Link)`
     text-decoration: underline;
   }
 `;
+console.log(TestMDX);
 
 export default function Home() {
   return (
     <Box>
+      <TestMDX />
       <Intro />
       <WhyCabana />
       <GetStarted />
