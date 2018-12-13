@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 import Logo from './Logo';
+import { SpectrumLogo, GitHubLogo } from './Svg';
 
 const StyledNavButton = styled(NavLink)`
   text-decoration: none;
@@ -15,7 +16,7 @@ const StyledNavButton = styled(NavLink)`
     border-bottom: 2px solid ${themeGet('colors.primary')};
   }
   &:hover {
-    color: ${themeGet('colors.darkGrey')};
+    color: ${themeGet('colors.primary')};
   }
 `;
 
@@ -24,6 +25,17 @@ const NavButton = props => (
     <BodyText is="span">{props.children}</BodyText>
   </StyledNavButton>
 );
+
+const IconLink = styled(Box)`
+  &:hover {
+    color: ${props => themeGet('colors.primary', 'purple')(props)};
+  }
+`;
+
+IconLink.defaultProps = {
+  is: 'a',
+  color: 'grey',
+};
 
 export default function Home({ onThemeChange }) {
   return (
@@ -52,11 +64,7 @@ export default function Home({ onThemeChange }) {
           </TextPrimitive>
         </NavLink>
       </BodyText>
-      <div>
-        <a href="https://spectrum.chat/cabana-designsystem" target="_blank">
-          Join the Community
-        </a>
-      </div>
+
       <div>
         <SmallText>Theme:</SmallText>
         {process.env !== 'production' && (
@@ -76,6 +84,12 @@ export default function Home({ onThemeChange }) {
         </NavButton>
         <NavButton to="/components">Components</NavButton>
       </div>
+      <IconLink mx={1} href="https://spectrum.chat/cabana-designsystem" target="_blank">
+        <SpectrumLogo />
+      </IconLink>
+      <IconLink style={{ lineHeight: 1 }} href="https://github.com/lucastobrazil/cabana-react" target="_blank">
+        <GitHubLogo />
+      </IconLink>
     </Box>
   );
 }
