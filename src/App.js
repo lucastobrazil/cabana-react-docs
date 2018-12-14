@@ -1,15 +1,17 @@
 import { ThemeProvider, injectGlobal } from 'styled-components';
 
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import cabanaDefaultTheme, { bainTheme, darkTheme } from './docsTheme';
 import Home from './pages/Home';
-import StyleGuide from './pages/Styleguide';
 import Nav from './components/Nav';
 import Examples from './pages/Examples';
 import Guides from './pages/Guides';
 import Footer from './components/Footer';
 import { Box } from 'cabana-react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import Loading from './components/Loading';
+
+const Components = lazy(() => import('./pages/Styleguide'));
 
 injectGlobal`
 body {
@@ -50,7 +52,9 @@ class App extends React.Component {
               <Route component={Home} exact path="/" />
               <Route component={Guides} path="/guides" />
               <Route component={Examples} path="/examples" />
-              <Route component={StyleGuide} path="/components" />
+              <Suspense fallback={<Loading />}>
+                <Route component={props => <Components {...props} />} path="/components" />
+              </Suspense>
             </Switch>
             <Footer />
           </Box>
