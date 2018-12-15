@@ -1,7 +1,16 @@
-import { BodyText } from 'cabana-react';
-import { IconHeart, IconCart } from 'cabanaico';
+import { BodyText, Box } from 'cabana-react';
+import * as icons from 'cabanaico';
+const Icons = () => (
+    <Box fontSize="lead" display="grid" color="darkGrey" style={{ gridTemplateRows: 'repeat(10, 1fr)', gridTemplateColumns: 'repeat(10, 1fr)', gap: '20px' }}>
+        {Object.keys(icons).map(key => {
+            const Icon = icons[key];
+            return <Icon />;
+        })}
+    </Box>
+);
 
 # Icons
-<BodyText>We use the cabanaico library</BodyText>
-<IconHeart />
-<IconCart />
+
+Cabana uses the [cabanaico](https://github.com/lucastobrazil/cabanaico) library.
+
+<Icons />
