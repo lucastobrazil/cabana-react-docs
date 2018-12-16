@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, HeadingThree, HeadingFive } from 'cabana-react';
+import { Box, HeadingOne, HeadingThree, HeadingFive, BodyText } from 'cabana-react';
 import Button from '../docs/Button.mdx';
 import Card from '../docs/Card.mdx';
 import Forms from '../docs/Forms/index.mdx';
@@ -17,13 +17,15 @@ import Avatars from '../docs/Avatars.mdx';
 
 import { MDXProvider } from '@mdx-js/tag';
 
-const Heading = props => <HeadingThree is="h1" pt={9} mb={2} style={{ display: 'block', borderBottom: '1px solid lightgrey' }} {...props} />;
+const H1 = props => <HeadingThree is="h1" pt={12} mb={2} style={{ display: 'block', borderBottom: '1px solid lightgrey' }} {...props} />;
+const H2 = props => <HeadingFive is="h2"  my={2} {...props} />;
+const DocsText = props => <BodyText pb={2} {...props} />;
 
 const components = {
-    h1: Heading,
-    h2: HeadingFive,
+    h1: H1,
+    h2: H2,
+    p: DocsText,
   //   // ...
-  //   p: Text,
   //   code: Pre,
   //   inlineCode: Code
 };
@@ -33,7 +35,8 @@ export default function StyleGuide() {
     <MDXProvider components={components}>
       <Box display="flex">
         <DocsNav />
-        <Box ml={246} maxWidth={900} px={4}>
+        <Box ml={246} maxWidth={1000} px={4}>
+        <HeadingOne mt={3}>Component Library</HeadingOne>
           <Avatars />
           <Button />
           <Card />
