@@ -4,10 +4,12 @@ const Icons = () => (
     <Box fontSize="lead" display="grid" color="darkGrey" style={{ gridTemplateRows: 'repeat(10, 1fr)', gridTemplateColumns: 'repeat(10, 1fr)', gap: '20px' }}>
         {Object.keys(icons).map(key => {
             const Icon = icons[key];
-            return <Icon />;
+            return <Icon key={key} />;
         })}
     </Box>
 );
+
+<a id="Icons"></a>
 
 # Icons
 

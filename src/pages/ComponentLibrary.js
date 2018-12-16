@@ -2,14 +2,14 @@ import React from 'react';
 import { Box, HeadingThree, HeadingFive } from 'cabana-react';
 import Button from '../docs/Button.mdx';
 import Card from '../docs/Card.mdx';
-import FormsDocs from '../docs/Forms/index';
+import Forms from '../docs/Forms/index.mdx';
 import Icon from '../docs/Icon.mdx';
 import DocsNav from '../components/DocsNav';
 import NotificationBar from '../docs/NotificationBar.mdx';
 import Pagination from '../docs/Pagination.mdx';
 import ProgressBar from '../docs/ProgressBar/index.mdx';
 import Tabs from '../docs/Tabs.mdx';
-import TextDocs from '../docs/Text';
+import Text from '../docs/Text.mdx';
 import Tooltip from '../docs/Tooltip.mdx';
 import Chip from '../docs/Chip.mdx';
 import Tags from '../docs/Tags.mdx';
@@ -38,14 +38,14 @@ export default function StyleGuide() {
           <Button />
           <Card />
           <Chip />
-          <FormsDocs />
+          <Forms />
           <Icon />
           <NotificationBar />
           <Pagination />
           <ProgressBar />
           <Tabs />
           <Tags />
-          <TextDocs />
+          <Text />
           <Tooltip />
         </Box>
       </Box>
