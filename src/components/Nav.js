@@ -21,7 +21,7 @@ const StyledNavButton = styled(NavLink)`
 `;
 
 const NavButton = props => (
-  <StyledNavButton activeClassName="is-active" to={props.to}>
+  <StyledNavButton activeClassName="is-active" to={props.to} exact={props.exact}>
     <BodyText is="span">{props.children}</BodyText>
   </StyledNavButton>
 );
@@ -67,15 +67,18 @@ export default function Home({ onThemeChange }) {
 
       <div>
         <SmallText>Theme:</SmallText>
-        {process.env !== 'production' && (
+        {process.env !== 'production' ? (
           <select onChange={onThemeChange} defaultValue="default">
             <option value="default">Default</option>
             <option value="dark">Dark</option>
             <option value="bain">Bain</option>
           </select>
-        )}
+        ) : null}
       </div>
       <div>
+        <NavButton to="/" exact={true} mr={2}>
+          Home
+        </NavButton>
         <NavButton to="/guides" mr={2}>
           Guides
         </NavButton>
