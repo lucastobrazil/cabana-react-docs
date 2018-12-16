@@ -3,7 +3,7 @@ import { Box, BodyText, HeadingTwo, HeadingThree, TextPrimitive } from 'cabana-r
 import styled from 'styled-components';
 
 const Section = props => <Box is="section" maxWidth={900} py={4} mx="auto" {...props} />;
-const SectionHeading = props => <HeadingTwo mb={3} mt={4} {...props} />;
+const SectionHeading = props => <HeadingTwo mb={3} mt={4} pt={4} {...props} />;
 const SubHeading = props => <HeadingThree mb={2} mt={6} {...props} />;
 const SectionGrid = props => <Box width="50%" p={2} {...props} />;
 

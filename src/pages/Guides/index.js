@@ -29,10 +29,10 @@ Item.defaultProps = {
 };
 
 const sections = [
-  { url: 'gettingStarted', name: 'Getting Started' },
-  { url: 'styling', name: 'Styling' },
-  { url: 'theming', name: 'Theming' },
-  { url: 'bestPractices', name: 'Best Practices' },
+  { url: 'GettingStarted', name: 'Getting Started' },
+  { url: 'Styling', name: 'Styling' },
+  { url: 'Theming', name: 'Theming' },
+  { url: 'BestPractices', name: 'Best Practices' },
 ];
 
 export default function Guides() {
