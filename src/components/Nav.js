@@ -65,18 +65,18 @@ export default function Home({ onThemeChange }) {
         </NavLink>
       </BodyText>
 
-      <div>
-        <SmallText>Theme:</SmallText>
-        {process.env !== 'production' ? (
+      {process.env.NODE_ENV !== 'production' ? (
+        <div>
+          <SmallText>Theme:</SmallText>
           <select onChange={onThemeChange} defaultValue="default">
             <option value="default">Default</option>
             <option value="dark">Dark</option>
             <option value="bain">Bain</option>
           </select>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
       <div>
-        <NavButton to="/" exact={true} mr={2}>
+        <NavButton to="/" exact mr={2}>
           Home
         </NavButton>
         <NavButton to="/guides" mr={2}>
