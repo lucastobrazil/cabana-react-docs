@@ -1,8 +1,6 @@
 import { Box, ProgressBar } from 'cabana-react';
 import React, { Fragment } from 'react';
 
-import Docs from './docs';
-
 const Slider = ({ onChange, amount }) => (
   <Fragment>
     <input type="range" style={{ width: '100%' }} step="1" value={amount} onChange={onChange} list="tickmarks" />
@@ -21,6 +19,7 @@ const Slider = ({ onChange, amount }) => (
     </datalist>
   </Fragment>
 );
+
 class StatefulExample extends React.Component {
   constructor() {
     super();
@@ -55,17 +54,4 @@ class StatefulExample extends React.Component {
   }
 }
 
-export default function ProgressBarDocs() {
-  return (
-    <Docs title="ProgressBar">
-      <Box width={1 / 3}>
-        <StatefulExample innerBg="primary" />
-        <StatefulExample innerBg="tertiary" borderRadius="large" />
-        <StatefulExample innerBg="success" color="white" p={2} fontSize="body" borderRadius="large" />
-        <StatefulExample innerBg="primary" p={1} borderRadius="none" />
-        <StatefulExample innerBg="primary" fontSize="hero" />
-        <StatefulExample innerBg="primary" fontSize="hero" showNumber={false} minHeight={20} />
-      </Box>
-    </Docs>
-  );
-}
+export { StatefulExample, Slider };

@@ -8,7 +8,7 @@ import { Box } from 'cabana-react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Loading from './components/Loading';
 
-const Components = lazy(() => import('./pages/Styleguide'));
+const ComponentLibrary = lazy(() => import('./pages/ComponentLibrary'));
 const Home = lazy(() => import('./pages/Home'));
 const Guides = lazy(() => import('./pages/Guides'));
 const Examples = lazy(() => import('./pages/Examples'));
@@ -53,7 +53,7 @@ class App extends React.Component {
                 <Route component={props => <Home {...props} />} exact path="/" />
                 <Route component={props => <Guides {...props} />} path="/guides" />
                 <Route component={props => <Examples {...props} />} path="/examples" />
-                <Route component={props => <Components {...props} />} path="/components" />
+                <Route component={props => <ComponentLibrary {...props} />} path="/components" />
               </Suspense>
             </Switch>
             <Footer />
