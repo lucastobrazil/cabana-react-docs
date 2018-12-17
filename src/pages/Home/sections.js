@@ -98,7 +98,7 @@ const Intro = () => (
       </Box>
     </Section>
     <Section>
-      <Box display="flex">
+      <Box display="flex" flexWrap={['wrap', 'nowrap']}>
         <SectionGrid>
           <HeadingFour textAlign="center" mt={0}>
             Sketch
@@ -147,7 +147,7 @@ const WhyCabana = () => (
     <SectionHeading mt={0} textAlign="center" flex="0 0 100%">
       Why Cabana?
     </SectionHeading>
-    <Section display="flex">
+    <Section display="flex" flexWrap={['wrap', 'nowrap']}>
       <SectionGrid>
         <HeadingThree>For Designers</HeadingThree>
         <ul>
@@ -170,7 +170,7 @@ const WhyCabana = () => (
 const MoreExamples = () => (
   <Box bg="#fafafa" py={3}>
     <SectionHeading textAlign="center">Sketch Library and Theme</SectionHeading>
-    <Section display="flex">
+    <Section display="flex" flexWrap={['wrap', 'nowrap']}>
       <SectionGrid>
         <HeadingThree mb={1}>Sketch Layer Styles</HeadingThree>
         <img style={{ maxWidth: 300 }} src={require('../../images/colors_sketch.png')} />
@@ -197,7 +197,7 @@ const theme = {
       </SectionGrid>
     </Section>
     <Button bg="primary" color="white" display="block" my={8} mx="auto">
-      Check out the guides
+      <StyledLink to="/guides">Check out the guides</StyledLink>
     </Button>
   </Box>
 );
@@ -222,7 +222,7 @@ const Install = () => <CodeExample>{`npm install --save cabana-react`}</CodeExam
 const GetStarted = () => (
   <Box py={4}>
     <SectionHeading textAlign="center">Get Started</SectionHeading>
-    <Section display="flex">
+    <Section display="flex" flexWrap={['wrap', 'nowrap']}>
       <SectionGrid>
         <HeadingThree mb={1}>Sketch</HeadingThree>
         <TextLink href="https://cabanadesignsystem.com/">Check out the Sketch Library</TextLink>
