@@ -72,7 +72,7 @@ const Intro = () => (
         my={8}
         textAlign="center"
       >
-        A design system built especially for Sketch and React.
+        A design system built especially for <span style={{ textDecoration: 'underline' }}>both</span> Sketch and React.
       </HeadingOne>
       <BodyText textAlign="center" mb={4}>
         Built with React,{' '}

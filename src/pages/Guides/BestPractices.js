@@ -95,7 +95,7 @@ const App = () => (
           </AdBox>
         </SectionGrid>
       </Card>
-      <HeadingFour my={4}>Core styles inside, variant styles outside</HeadingFour>
+      <SubHeading my={4}>3. Core styles inside, variant styles outside</SubHeading>
       <P>
         Remember that Cabana is a design system. The system is based around <em>constraints</em>. A good way of
         'enforcing' those constraints is to internally set the 'core' or 'fixed' style properties. Of course, to not be{' '}
