@@ -9,13 +9,20 @@
         "lint": "eslint src/**",
         "lint:watch": "esw -w src/**",
         "start": "npm run build && NODE_ENV=production node server.js",
-        "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js --require ignore-styles"
+        "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js --require ignore-styles",
+        "docz:dev": "docz dev",
+        "docz:build": "docz build"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-class-properties": "^7.2.3",
+        "@babel/plugin-transform-runtime": "^7.2.0",
+        "@babel/preset-env": "^7.2.3",
+        "@babel/preset-react": "^7.0.0",
         "@mdx-js/loader": "^0.16.6",
-        "babel-core": "^6.24.1",
+        "babel-core": "^7.0.0",
         "babel-loader": "^6.4.1",
         "babel-plugin-syntax-dynamic-import": "^6.18.0",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -24,14 +31,17 @@
         "cabana-react": "0.0.5",
         "cabanaico": "^0.0.2-development",
         "css-loader": "^0.28.0",
+        "docz-theme-default": "^0.13.7",
         "enzyme": "^2.8.1",
         "expect": "^1.20.2",
         "express": "^4.16.4",
         "file-loader": "^2.0.0",
+        "fsevents": "^2.0.1",
         "mocha": "^3.2.0",
         "node-sass": "^4.10.0",
-        "prop-types": "^15.5.8",
+        "prop-types": "^15.6.2",
         "react": "^16.6.3",
+        "react-dev-utils": "^7.0.0",
         "react-dom": "^16.6.3",
         "react-router": "^4.3.1",
         "react-router-dom": "^4.3.1",
@@ -41,10 +51,12 @@
         "style-loader": "^0.16.1",
         "styled-components": "^3.4.10",
         "styled-system": "^3.1.11",
+        "typescript": "^3.2.2",
         "webpack": "^2.3.3"
     },
     "devDependencies": {
         "babel-eslint": "^7.2.2",
+        "docz": "^0.13.7",
         "eslint": "^3.19.0",
         "eslint-loader": "^1.7.1",
         "eslint-plugin-jsx-a11y": "^4.0.0",
@@ -57,5 +69,8 @@
         "webpack-dev-middleware": "^1.10.1",
         "webpack-dev-server": "^2.4.2",
         "webpack-hot-middleware": "^2.24.3"
+    },
+    "resolutions": {
+        "ansi-styles": "^3.2.0"
     }
 }
