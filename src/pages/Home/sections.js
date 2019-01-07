@@ -44,7 +44,7 @@ const BlogPostCard = props => (
     <CardImage
       src={props.imageSrc || 'https://media-cdn.tripadvisor.com/media/photo-s/0f/d6/9f/af/sunscape-dominican-beach.jpg'}
     />
-    <CardTitle fontWeight="normal" is="a" textDecoration="none" href="foo">
+    <CardTitle fontWeight="normal" is="a" textDecoration="none" href={props.href} target="_blank">
       {props.title}
     </CardTitle>
     <CardBodyText>5 min read</CardBodyText>
@@ -75,8 +75,11 @@ const Intro = () => (
         A design system built especially for <span style={{ textDecoration: 'underline' }}>both</span> Sketch and React.
       </HeadingOne>
       <BodyText textAlign="center" mb={4}>
-        Built with React,{' '}
-        <TextLink is="a" href="https://www.styled-components.com/">
+        Built with{' '}
+        <TextLink is="a" href="http://reactjs.com">
+          React,
+        </TextLink>{' '}
+        <TextLink is="a" href="https://www.styled-components.com">
           styled-components
         </TextLink>{' '}
         and <TextLink href="https://github.com/jxnblk/styled-system">styled-system</TextLink>.
@@ -206,11 +209,11 @@ const BlogPosts = () => (
   <Box bg="tertiary">
     <Section>
       <SubHeading mb={2} textAlign="center" color="white">
-        Blog Posts
+        Relevant Blog Posts
       </SubHeading>
       <Box display="flex">
         <BlogPostCard title="Introducing Cabana for React" imageSrc="" />
-        <BlogPostCard title="Getting started with Styled-System" imageSrc="" />
+        <BlogPostCard title="Patterns for Style Composition in React" imageSrc="" href="http://jxnblk.com/writing/posts/patterns-for-style-composition-in-react/"/>
         <BlogPostCard title="Introducing Cabana for React" imageSrc="" />
       </Box>
     </Section>
