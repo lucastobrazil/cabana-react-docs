@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, LeadText } from 'cabana-react';
+import { Box, LeadText } from 'cabana-react';
 import Section from '../../components/Section';
 import styled from 'styled-components';
 import GettingStarted from './GettingStarted';
@@ -8,24 +8,26 @@ import BestPractices from './BestPractices';
 import Theming from './Theming';
 import { HashLink as Link } from 'react-router-hash-link';
 
-const Item = styled(Button)`
+const TopNavItem = styled(Box)`
   transition: all 350ms;
+  text-decoration: none;
   &:hover {
-    border-color: grey;
+    background-color: #fafafa;
     box-shadow: 0 16px 24px rgba(48, 49, 51, 0.2);
   }
 `;
 
-Item.defaultProps = {
+TopNavItem.defaultProps = {
   boxShadow: 100,
   bg: 'white',
   border: '1px solid',
-  borderColor: 'lightGrey',
+  borderColor: 'transparent',
   borderRadius: 'small',
   color: 'primary',
   py: 2,
   textAlign: 'center',
   is: Link,
+  fontWeight: 'bold'
 };
 
 const sections = [
@@ -49,7 +51,7 @@ export default function Guides() {
           }}
         >
           {sections.map((item, key) => (
-            <Item key={key} to={`#${item.url}`} children={item.name} />
+            <TopNavItem key={key} to={`#${item.url}`} children={item.name} />
           ))}
         </div>
       </Section>
