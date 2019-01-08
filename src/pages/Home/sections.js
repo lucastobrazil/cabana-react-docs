@@ -145,9 +145,9 @@ const MyButton = (
 );
 
 const WhyCabana = () => (
-  <Box bg="primary" color="white" pb={3} display="flex" flexWrap="wrap" justifyContent="center">
-    <Logo width={80} height={80} />
+  <Box bg="#fafafa" pb={3} display="flex" flexWrap="wrap" justifyContent="center">
     <SectionHeading mt={0} textAlign="center" flex="0 0 100%">
+      <Logo width={60} height={60} style={{ verticalAlign: 'middle' }}/>{' '}
       Why Cabana?
     </SectionHeading>
     <Section display="flex" flexWrap={['wrap', 'nowrap']}>
@@ -213,7 +213,11 @@ const BlogPosts = () => (
       </SubHeading>
       <Box display="flex">
         <BlogPostCard title="Introducing Cabana for React" imageSrc="" />
-        <BlogPostCard title="Patterns for Style Composition in React" imageSrc="" href="http://jxnblk.com/writing/posts/patterns-for-style-composition-in-react/"/>
+        <BlogPostCard
+          title="Patterns for Style Composition in React"
+          imageSrc=""
+          href="http://jxnblk.com/writing/posts/patterns-for-style-composition-in-react/"
+        />
         <BlogPostCard title="Introducing Cabana for React" imageSrc="" />
       </Box>
     </Section>
@@ -254,12 +258,6 @@ const Story = () => (
       React equivalent of the Cabana Sketch Library, and they are intended to work together... just like designers and
       developers 😇
     </BodyText>
-    <ul>
-      <ListItem>Speaking the same language (constraints-based)</ListItem>
-      <ListItem>Rapid prototyping </ListItem>
-      <ListItem>Theme-based design system </ListItem>
-      <ListItem>DRY from the beginning</ListItem>
-    </ul>
   </Section>
 );
 
