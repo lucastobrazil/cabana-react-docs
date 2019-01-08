@@ -24,7 +24,7 @@ class StatefulExample extends React.Component {
   constructor() {
     super();
     this.state = {
-      amount: 20,
+      amount: 62,
     };
   }
 
