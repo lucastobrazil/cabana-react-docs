@@ -4,7 +4,7 @@
     "description": "a playground for experimenting with a component library",
     "main": "server.js",
     "scripts": {
-        "build": "webpack --config webpack.prod.config.js",
+        "build": "webpack --config webpack.prod.config.js --mode production",
         "dev": "webpack-dev-server --hot --inline --mode development",
         "lint": "eslint src/**",
         "lint:watch": "esw -w src/**",
